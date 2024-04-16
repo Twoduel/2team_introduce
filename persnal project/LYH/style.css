@@ -1,0 +1,245 @@
+body {
+    width: 60%;
+
+    margin: 0px auto 0px auto;
+}
+
+header {
+    height: 100px;
+
+    background-color: green;
+
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.home {
+    margin-left: 100px;
+}
+
+.header_intro {
+    margin-left: auto;
+    margin-right: 100px;
+}
+
+.intro_team {
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro_team {
+    margin-top: 30px;
+    font-size: 120px;
+
+    background-color: skyblue;
+}
+
+.write {
+    width: 80px;
+
+    margin-top: 30px;
+    margin-left: auto;
+}
+
+.card-group {
+    margin-top: 10px;
+}
+
+.card-group .card {
+    flex: 1 0 300px;
+    cursor: pointer;
+}
+
+.card-group .card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 614px;
+    object-fit: cover;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.card-mbti {
+    text-align: center;
+}
+
+body {
+    width: 60%;
+
+    margin: 0px auto 0px auto;
+}
+
+header {
+    height: 100px;
+
+    background-color: green;
+
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.home {
+    margin-left: 100px;
+}
+
+.header_intro {
+    margin-left: auto;
+    margin-right: 100px;
+}
+
+.intro_team {
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro_team {
+    margin-top: 30px;
+    font-size: 120px;
+
+    background-color: skyblue;
+}
+
+.write {
+    width: 5vw;
+
+    margin-top: 30px;
+}
+
+.Write-Modal-btn {
+    margin-left: auto;
+}
+
+.card-group {
+    margin-top: 10px;
+}
+
+.card-group .card {
+    flex: 1 0 300px;
+    cursor: pointer;
+}
+
+.card-group .card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 614px;
+    object-fit: cover;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.card-mbti {
+    text-align: center;
+}
+
+.modal-fade {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-dialog{
+    width: 900px;
+    height: 100%;
+}
+
+.modal-body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-body .row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.modal-footer .btn {
+    width: 80px;
+    height: 40px;
+    font-size: 18px;
+}
+
+.sub-modal-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload-image-group {
+    width: 250px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upload-image-group .btn {
+    width: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 5px;
+}
+
+.writeimg {
+    width: 225px;
+    height: 300px;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 1px gray inset;
+}
+
+#image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.writeinform {
+    width: 600px;
+
+    margin: 0px auto 0px auto;
+}
+
+.inputname {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+}
+
+.password-group .col-auto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
