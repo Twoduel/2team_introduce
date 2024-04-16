@@ -1,11 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>메인페이지</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+        * {
+            font-family: "Noto Sans KR", sans-serif;
+        }
+
+        .ckcard {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ckcard2 {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header {
+
+        }
+
+        .container {
+
+        }
+
+        .footer {
+
+        }
+
+         /* #scrollBtn {
+            position: fixed;
+
+            bottom: 20px;
+
+            right: 20px;
+
+            z-index: 99;
+            cursor: pointer;
+            border: none;
+            background-color: blue;
+            color: white;
+            border-radius: 5px;
+            font-size: 20px;
+
+            width: 200px;
+
+            height: 100px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+        } */
+    </style>
+
+    <script>
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("scrollBtn").style.display = "block";
+            } else {
+                document.getElementById("scrollBtn").style.display = "none";
+            }
+        }
+
+    </script>
 </head>
+
 <body>
-    <p>성공한건가</p>
+    <div class="wrap">
+        <div class="header"></div>
+        <div class="container">
+            <div class="ckcard">
+                <div class="card w-50 mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">텐션을 높2조</h5>
+                        <p class="card-text"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="ckcard2">
+                <div class="card w-50">
+                    <div class="card-body">
+                        <h5 class="card-title">우리 텐션을 높2조를 소개합니다.</h5>
+                        <p class="card-text">설명</p>
+                    </div>
+                </div>
+                <div class="card w-50">
+                    <div class="card-body">
+                        <h5 class="card-title">추구하는 궁극적인 목표</h5>
+                        <p class="card-text">설명</p>
+                    </div>
+                </div>
+                <div class="card w-50">
+                    <div class="card-body">
+                        <h5 class="card-title">우리팀의 약속</h5>
+                        <p class="card-text">설명</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer">
+            <div style="height: 2000px;"> <!-- 스크롤이 가능한 페이지를 위한 임시 내용 -->
+                <!-- 페이지 내용은 여기에 -->
+            </div>
+
+            <!-- 스크롤 버튼 -->
+            <button type="button">Top</button>
+
+            <script src="scroll_button.js"></script>
+        </div>
+    </div>
 </body>
+
 </html>
