@@ -1,11 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>메인페이지</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+        * {
+            font-family: "Noto Sans KR", sans-serif;
+        }
+
+        .ckcard {
+            width: 1000px;
+            margin: 50px auto 20px auto;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ckcard2 {
+            width: 1000px;
+            /* margin-bottom: 20px; */
+            margin: 50px auto 100px auto;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .ckcard2 .card {
+            margin-bottom: 20px;
+            height: 300px;
+            
+        }
+
+        .header {}
+
+        .container {
+            height: 100%;
+            align-items: center;
+        }
+
+        .footer {
+            margin-top: 50px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .sticky-button {
+            position: sticky;
+            bottom: 1rem;
+            z-index: 10;
+            width: 600px;
+            height: 50px;
+        }
+    </style>
+
+    <script>
+
+    </script>
 </head>
+
 <body>
-    
+    <div class="wrap">
+        <div class="header"></div>
+        <div class="container">
+            <div class="ckcard">
+                <div class="card w-50 mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">텐션을 높2조</h5>
+                        <p class="card-text"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="ckcard2">
+                <div class="card w-50">
+                    <div class="card-body">
+                        <h5 class="card-title">우리 텐션을 높2조를 소개합니다.</h5>
+                        <p class="card-text">설명</p>
+                    </div>
+                </div>
+                <div class="card w-50">
+                    <div class="card-body">
+                        <h5 class="card-title">추구하는 궁극적인 목표</h5>
+                        <p class="card-text">설명</p>
+                    </div>
+                </div>
+                <div class="card w-50">
+                    <div class="card-body">
+                        <h5 class="card-title">우리팀의 약속</h5>
+                        <p class="card-text">설명</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="fixed inset-x-0 bottom-0 p-4">
+                <button
+                    class="sticky-button w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    팀원 구경하러 가기
+                </button>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
