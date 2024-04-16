@@ -137,11 +137,11 @@ header {
 
 .card-img-top {
     width: 100%;
-    height: 614px;
+    height: 400px;
     object-fit: cover;
 }
 
-.card-title {
+.card-name {
     text-align: center;
 }
 
