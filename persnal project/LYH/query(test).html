@@ -32,27 +32,21 @@
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
 
-        // URL에서 파라미터 추출하는 함수
-        function getParameterByName(name, url) {
-            if (!url) url = window.location.href;
-            name = name.replace(/[\[\]]/g, "\\$&");
-            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-                results = regex.exec(url);
-            if (!results) return null;
-            if (!results[2]) return '';
-            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        // 로컬스토리지에서 ID값 가져오고, 지우기
+        if (typeof window !== 'undefined') {
+            localStorage.getItem("ID");
         }
 
-        // 페이지 로드 시 ID 파라미터 추출하여 콘솔에 출력
-        window.onload = function () {
-            var cardId = getParameterByName('id');
-            console.log(cardId);
-        };
+        const id = localStorage.getItem("ID");
+        localStorage.removeItem("ID");
+        console.log(id);
     </script>
 </head>
 
 <body>
-
+    <div>
+        <h1></h1>
+    </div>
 </body>
 
 </html>
