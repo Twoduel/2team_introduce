@@ -1,6 +1,4 @@
-<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,25 +7,19 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         /* @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gugi&display=swap');
-
         * {
             font-family: "Gugi", sans-serif;
         }   현재 이 페이지에 적용된 폰트. 필요시 주석제거 후 사용*/
-
-
         @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gugi&display=swap');
-
         * {
             font-family: "Gugi", sans-serif;
         }
-
         .ckcard {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
         }
-
         .ckcard2 {
             margin-bottom: 100px;
             display: flex;
@@ -35,7 +27,6 @@
             align-items: center;
             justify-content: center;
         }
-
         .ckcard2 .card {
             margin-bottom: 20px;
             height: auto;
@@ -43,46 +34,36 @@
             background-size: contain;
             background-repeat: no-repeat;
             padding: 20px;
-
         }
-
         .card-content {
             position: relative;
             z-index: 1;
         }
-
         .card-content .card-title,
         .card-text {
             position: relative;
             z-index: 2;
         }
-
         header {
             width: 70%;
             height: 100px;
             margin: 0px auto 0px auto;
-
             display: flex;
             justify-content: center;
             align-items: center;
-
         }
-
         .leftddabong {
             height: 100px;
             width: 100px;
         }
-
         .tag1 {
             margin: 0px auto 0px auto;
             font-size: 70px;
         }
-
         .container {
             height: 100%;
             align-items: center;
         }
-
         .footer {
             margin-top: 50px;
             position: absolute;
@@ -92,7 +73,6 @@
             text-align: center;
             z-index: 10;
         }
-
         .sticky-button {
             position: sticky;
             bottom: 1rem;
@@ -100,56 +80,46 @@
             width: 600px;
             height: 50px;
         }
-
         body {
-
-            background: url('https://postfiles.pstatic.net/MjAyNDA0MTdfMjMg/MDAxNzEzMjgwMTI5MTQx.WxkN6-1xlwbmRC43Sf7f33EluWTiUuWtBwYRgxS4N6Mg.TcanF61mkkgzbFUgJ5fubPkntedhBz3-i-bGDxsdrKMg.JPEG/AdobeStock_231680254.jpeg?type=w966') 0 center / 100% repeat-x;
+            width: 100vw;
+            height: 100vh;
+            background: url('https://postfiles.pstatic.net/MjAyNDA0MTdfMjMg/MDAxNzEzMjgwMTI5MTQx.WxkN6-1xlwbmRC43Sf7f33EluWTiUuWtBwYRgxS4N6Mg.TcanF61mkkgzbFUgJ5fubPkntedhBz3-i-bGDxsdrKMg.JPEG/AdobeStock_231680254.jpeg?type=w966') 0 center / 100vw repeat-x;
             animation: movebg 4s linear infinite;
-
-            background-size: cover;
+            background-size: 100vw 100vh;
             /* background-position: center;
             background-repeat: no-repeat; */
         }
-
         .subbody {
             width: 70%;
             margin: 0px auto 0px auto;
         }
-
         @keyframes movebg {
             0% {
                 background-position: 0 center;
             }
-
             100% {
-                background-position: -200% center;
+                background-position: -100vw center;
             }
         }
-
         .tag2 {
             font-size: 25px;
         }
-
         .ckcard2 .my-3 {
             padding: 100px 0;
         }
-
         #card1 {
             background-color: lightgreen;
             background-image: url('https://postfiles.pstatic.net/MjAyNDA0MTZfMjY3/MDAxNzEzMjU3NjcyNTE0.wqzVkXydOoFcfXNrdSEuBu8nLxrijs91igVcwxs7XA8g.VrG6zYF8-GN-WJQuNACM112mSNh3fNFQ-pP0qKo4rfkg.PNG/enfp-removebg-preview.png?type=w966');
         }
-
         #card2 {
             background-color: lemonchiffon;
             background-image: url('https://postfiles.pstatic.net/MjAyNDA0MTZfNTkg/MDAxNzEzMjU3Njc4MDQ5.mIEDX1mwUtBDwB6zWdquIVrjDYOMviE3fjQedx9KTZQg.3--Dw9s50HGkg91aUW11xPByaygoE_lImxMD_sldfd0g.PNG/estp-removebg-preview.png?type=w966');
         }
-
         #card3 {
             background-color: lightcoral;
             background-image: url('https://postfiles.pstatic.net/MjAyNDA0MTZfMjY2/MDAxNzEzMjU3NjgzMzY4.VVmq3FfRCpEWPLldzcLseDcI5P9OF6_oqJc1lqlha54g.eOMVMKo6M1w8R0VOKI6OqAiQ6-FBydJiovkrKChUG6Ug.PNG/isfp-removebg-preview.png?type=w966');
         }
     </style>
-
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var button = document.querySelector(".sticky-button");
@@ -159,12 +129,8 @@
         });
     </script>
 </head>
-
 <body>
-
-
     <header>
-
         <div class="leftddabong"><img src="./따봉.svg"></div>
         <div class="card w-50">
             <div class="tag1">
@@ -172,7 +138,6 @@
             </div>
         </div>
         <div class="leftddabong"><img src="./따봉.svg"></div>
-
     </header>
     <div class="subbody">
         <div class="wrap">
@@ -204,12 +169,12 @@
             <div class="footer">
                 <div class="fixed inset-x-0 bottom-0 p-4">
                     <button
-                        class="sticky-button w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">팀원
-                        구경 하러가기</button>
+                        class="sticky-button w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                        팀원 구경 하러가기
+                    </button>
                 </div>
             </div>
         </div>
     </div>
 </body>
-
 </html>
