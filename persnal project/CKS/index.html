@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>연습장</title>
+    <title>메인페이지</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
@@ -14,25 +14,25 @@
         }
 
         body {
-            width: 100vw;
-            height: 100vh;
-            background: url('https://postfiles.pstatic.net/MjAyNDA0MTdfNzUg/MDAxNzEzMzM4NjY5MjEz.fftIDKSMtWm-C1UK-MNDLdSCgNfw3eo3CYblYgZ3g4Ig.ONpWQCO0TyNlq874rAXEsHqI6O2KYC5mT7bX4GNBuHAg.PNG/%EC%97%B0%EA%B2%B0%EB%B0%B0%EA%B2%BD.png?type=w966') 0 center / 100vw repeat-x;
-            animation: movebg 5s linear infinite;
-            background-size: 100vw 100vh;
-            background-attachment: fixed;
+            background-color: rgba(245, 245, 220, 0.2);
+            width: 70%;
+            margin: 0 auto 0 auto;
 
         }
 
         header {
-            width: 70%;
-            height: 100px;
-            margin: 70px auto 50px auto;
+            margin: 30px 0 30px 0;
             display: flex;
             justify-content: center;
             align-items: center;
         }
+        .logoimg {
+            width: 400px;
+            height: 120px;
+            cursor: pointer;
+        }
 
-        #headercolor {
+        .headercolor {
             background-color: #4c92b1;
         }
 
@@ -41,7 +41,6 @@
             display: flex;
             flex-direction: column;
             height: auto;
-
         }
 
         .leftddabong {
@@ -49,15 +48,6 @@
             width: 100px;
         }
 
-        @keyframes movebg {
-            0% {
-                background-position: 0 center;
-            }
-
-            100% {
-                background-position: -100vw center;
-            }
-        }
         .card {
             background-position: right;
             background-size: contain;
@@ -65,31 +55,29 @@
         }
 
         .card1 {
-            background-color: lightgreen;
+            background-color: rgba(144, 238, 144, 0.5);
             background-image: url('https://postfiles.pstatic.net/MjAyNDA0MTZfMjY3/MDAxNzEzMjU3NjcyNTE0.wqzVkXydOoFcfXNrdSEuBu8nLxrijs91igVcwxs7XA8g.VrG6zYF8-GN-WJQuNACM112mSNh3fNFQ-pP0qKo4rfkg.PNG/enfp-removebg-preview.png?type=w966');
         }
 
         .card2 {
-            background-color: lemonchiffon;
+            background-color: rgba(255, 250, 205, 0.5);
             background-image: url('https://postfiles.pstatic.net/MjAyNDA0MTZfNTkg/MDAxNzEzMjU3Njc4MDQ5.mIEDX1mwUtBDwB6zWdquIVrjDYOMviE3fjQedx9KTZQg.3--Dw9s50HGkg91aUW11xPByaygoE_lImxMD_sldfd0g.PNG/estp-removebg-preview.png?type=w966');
         }
 
         .card3 {
-            background-color: lightcoral;
+            margin-bottom: 150px;
+            background-color: rgba(240, 128, 128, 0.5);
             background-image: url('https://postfiles.pstatic.net/MjAyNDA0MTZfMjY2/MDAxNzEzMjU3NjgzMzY4.VVmq3FfRCpEWPLldzcLseDcI5P9OF6_oqJc1lqlha54g.eOMVMKo6M1w8R0VOKI6OqAiQ6-FBydJiovkrKChUG6Ug.PNG/isfp-removebg-preview.png?type=w966');
         }
 
         .footer {
-            height: 200px;
-            position: fixed;
-            bottom: 0px;
-            left: auto;
-            right: auto;
+            width: 100%;
+            height: 150px; 
             text-align: center;
-            z-index: 10;
         }
         
         .sticky-button {
+            margin-bottom: 50px;
             position: sticky;
             z-index: 10;
             width: 600px;
@@ -107,15 +95,8 @@
 </head>
 <body>
     <header>
-        <div class="leftddabong"><img src="./따봉.svg"></div>
-        <div class="card w-50" id="headercolor">
-            <div style="margin: 10px auto 0px auto; font-size: 70px;">
-                <h5 class="card-title">텐션을 높2조</h5>
-            </div>
-        </div>
-        <div class="leftddabong"><img src="./따봉.svg"></div>
+        <img  onclick="location.href='./index.html'" class="logoimg" src="https://postfiles.pstatic.net/MjAyNDA0MTdfMjcx/MDAxNzEzMzU0MjY5ODU2.9grHpGAr3wWHds1Uq6LFD-anLExZ4GV-rSnpdi4_-Sog.4J8uzR-wvg556txnx_3-BbWNYnNXaVybUzLFKY84DzQg.PNG/%EB%A1%9C%EA%B3%A0%ED%8C%8C%EC%9D%BC_(1).png?type=w966">      
     </header>
-    <div class="subbody">
         <div class="container">
             <div class="card1 card w-50 my-3">
                 <div class="card-body">
@@ -145,7 +126,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card3 card w-50 my-3">
+            <div class="card3 card w-50 my-3" style="margin-bottom: 150px;">
                 <div class="card-body">
                     <div style="font-size: 25px;">
                         <h5 class="card-title">우리팀의 약속
@@ -160,13 +141,13 @@
                 </div>
             </div>
         </div>
-        <div class="footer">
-            <div class="fixed inset-x-0 bottom-0">
-                <button
-                    class="sticky-button w-full bg-blue-500 hover:bg-red-500 text-white font-bold py-2 px-4 rounded">
-                    ! 팀원 구경 하러가기 !
-                </button>
-            </div>
+    </div>
+    <div class="footer">
+        <div class="fixed inset-x-0 bottom-0">
+            <button
+                class="sticky-button w-full bg-blue-500 hover:bg-red-500 text-white font-bold py-2 px-4 rounded">
+                ! 팀원 구경 하러가기 !
+            </button>
         </div>
     </div>
 </body>
