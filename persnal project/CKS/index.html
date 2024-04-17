@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>메인페이지</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> 
-    <integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+        
+        /* 2024년 1111i 경 맥북 깃 테스트*/
 
         * {
             font-family: "Noto Sans KR", sans-serif;
@@ -27,7 +28,7 @@
 
         .ckcard2 {
             /* width: 1000px; */
-             margin-bottom: 100px;
+            margin-bottom: 100px;
             /* margin: 50px auto 100px auto; */
 
             display: flex;
@@ -35,17 +36,40 @@
             align-items: center;
             justify-content: center;
         }
+
         .ckcard2 .card {
             margin-bottom: 20px;
-            height: 300px;
-            
+            height: auto;
+
+
+            background-position: right;
+            background-size: contain;
+
+            background-repeat: no-repeat;
+
+            padding: 20px;
+
         }
 
-        .header {}
+        .card-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .card-content .card-title,
+        .card-content .card-text {
+            position: relative;
+            z-index: 2;
+        }
+
+        .header {
+            
+        }
 
         .container {
             height: 100%;
             align-items: center;
+
         }
 
         .footer {
@@ -68,8 +92,30 @@
 
         body {
             width: 60%;
-
             margin: 0px auto 0px auto;
+            background-image: url('file:///C:/Users/Cho%20Kyu%20Sung/Downloads/%ED%8E%B8%EC%A7%912.svg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .ckcard2 .my-3 {
+            padding: 100px 0;
+        }
+
+        #card1 {
+            background-color: lightgreen;
+            background-image: url('https://postfiles.pstatic.net/MjAyNDA0MTZfMjY3/MDAxNzEzMjU3NjcyNTE0.wqzVkXydOoFcfXNrdSEuBu8nLxrijs91igVcwxs7XA8g.VrG6zYF8-GN-WJQuNACM112mSNh3fNFQ-pP0qKo4rfkg.PNG/enfp-removebg-preview.png?type=w966');
+        }
+
+        #card2 {
+            background-color: lemonchiffon;
+            background-image: url('https://postfiles.pstatic.net/MjAyNDA0MTZfNTkg/MDAxNzEzMjU3Njc4MDQ5.mIEDX1mwUtBDwB6zWdquIVrjDYOMviE3fjQedx9KTZQg.3--Dw9s50HGkg91aUW11xPByaygoE_lImxMD_sldfd0g.PNG/estp-removebg-preview.png?type=w966');
+        }
+
+        #card3 {
+            background-color: lightcoral;
+            background-image: url('https://postfiles.pstatic.net/MjAyNDA0MTZfMjY2/MDAxNzEzMjU3NjgzMzY4.VVmq3FfRCpEWPLldzcLseDcI5P9OF6_oqJc1lqlha54g.eOMVMKo6M1w8R0VOKI6OqAiQ6-FBydJiovkrKChUG6Ug.PNG/isfp-removebg-preview.png?type=w966');
         }
     </style>
 
@@ -85,42 +131,42 @@
 
 <body>
     <div class="wrap">
-        <div class="header"></div>
-        <div class="container">
+        <div class="header">
             <div class="ckcard">
                 <div class="card w-50 mb-3">
                     <div class="card-body">
                         <h5 class="card-title">텐션을 높2조</h5>
-                        <p class="card-text"></p>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="container">
             <div class="ckcard2">
-                <div class="card w-50">
+                <div class="card w-50 my-3" id="card1">
                     <div class="card-body">
                         <h5 class="card-title">우리 텐션을 높2조를 소개합니다.</h5>
                         <p class="card-text">설명</p>
                     </div>
                 </div>
-                <div class="card w-50">
+                <div class="card w-50 my-3" id="card2">
                     <div class="card-body">
                         <h5 class="card-title">추구하는 궁극적인 목표</h5>
                         <p class="card-text">설명</p>
                     </div>
                 </div>
-                <div class="card w-50">
+                <div class="card w-50 my-3" id="card3">
                     <div class="card-body">
                         <h5 class="card-title">우리팀의 약속</h5>
                         <p class="card-text">설명</p>
                     </div>
                 </div>
-
             </div>
         </div>
-
         <div class="footer">
             <div class="fixed inset-x-0 bottom-0 p-4">
-                <button class="sticky-button w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">팀원 구경하러 가기</button>
+                <button
+                    class="sticky-button w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">팀원
+                    구경 하러가기</button>
             </div>
         </div>
     </div>
