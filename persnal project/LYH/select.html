@@ -242,7 +242,9 @@
             const id = card.getAttribute('data-id');
             card.addEventListener('click', async function () {
                 localStorage.setItem("ID", id);
-                window.location.href = "query(test).html"
+                window.location.href = `query.html?id=${id}`
+                console.log(card);
+                console.log(id);
             });
         });
 
