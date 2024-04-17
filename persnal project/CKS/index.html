@@ -52,47 +52,35 @@
             justify-content: center;
             align-items: center;
         }
+        #headercolor {
+            background-color: #4c92b1;
+        }
         .leftddabong {
             height: 100px;
             width: 100px;
         }
-        .tag1 {
-            margin: 0px auto 0px auto;
-            font-size: 70px;
-        }
+        
         .container {
             height: 100%;
             align-items: center;
         }
-        .footer {
-            margin-top: 50px;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            text-align: center;
-            z-index: 10;
-        }
-        .sticky-button {
-            position: sticky;
-            bottom: 1rem;
-            z-index: 10;
-            width: 600px;
-            height: 50px;
-        }
+        
         body {
             width: 100vw;
             height: 100vh;
-            background: url('https://postfiles.pstatic.net/MjAyNDA0MTdfMjMg/MDAxNzEzMjgwMTI5MTQx.WxkN6-1xlwbmRC43Sf7f33EluWTiUuWtBwYRgxS4N6Mg.TcanF61mkkgzbFUgJ5fubPkntedhBz3-i-bGDxsdrKMg.JPEG/AdobeStock_231680254.jpeg?type=w966') 0 center / 100vw repeat-x;
-            animation: movebg 4s linear infinite;
+            background: url('https://postfiles.pstatic.net/MjAyNDA0MTdfNzUg/MDAxNzEzMzM4NjY5MjEz.fftIDKSMtWm-C1UK-MNDLdSCgNfw3eo3CYblYgZ3g4Ig.ONpWQCO0TyNlq874rAXEsHqI6O2KYC5mT7bX4GNBuHAg.PNG/%EC%97%B0%EA%B2%B0%EB%B0%B0%EA%B2%BD.png?type=w966') 0 center / 100vw repeat-x;
+            animation: movebg 5s linear infinite;
             background-size: 100vw 100vh;
-            /* background-position: center;
-            background-repeat: no-repeat; */
+            background-attachment: fixed;
+
         }
         .subbody {
             width: 70%;
             margin: 0px auto 0px auto;
+
+
         }
+
         @keyframes movebg {
             0% {
                 background-position: 0 center;
@@ -101,11 +89,15 @@
                 background-position: -100vw center;
             }
         }
+        .tag1 {
+            margin: 0px auto 0px auto;
+            font-size: 70px;
+        }
         .tag2 {
             font-size: 25px;
         }
         .ckcard2 .my-3 {
-            padding: 100px 0;
+            padding: 90px 0;
         }
         #card1 {
             background-color: lightgreen;
@@ -116,15 +108,33 @@
             background-image: url('https://postfiles.pstatic.net/MjAyNDA0MTZfNTkg/MDAxNzEzMjU3Njc4MDQ5.mIEDX1mwUtBDwB6zWdquIVrjDYOMviE3fjQedx9KTZQg.3--Dw9s50HGkg91aUW11xPByaygoE_lImxMD_sldfd0g.PNG/estp-removebg-preview.png?type=w966');
         }
         #card3 {
+
             background-color: lightcoral;
             background-image: url('https://postfiles.pstatic.net/MjAyNDA0MTZfMjY2/MDAxNzEzMjU3NjgzMzY4.VVmq3FfRCpEWPLldzcLseDcI5P9OF6_oqJc1lqlha54g.eOMVMKo6M1w8R0VOKI6OqAiQ6-FBydJiovkrKChUG6Ug.PNG/isfp-removebg-preview.png?type=w966');
         }
+        .footer {
+            height: 200px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 10;
+        }
+        .sticky-button {
+            position: sticky;
+            bottom: 100px;
+            z-index: 10;
+            width: 600px;
+            height: 50px;
+        }
+
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var button = document.querySelector(".sticky-button");
             button.addEventListener("click", function () {
-                window.location.href = "file:///C:/Users/Cho Kyu Sung/OneDrive/바탕 화면/git_test/2team_introduce/persnal project/LYH/select.html";//상대경로
+                window.location.href = "../LYH/select.html";//상대경로
             });
         });
     </script>
@@ -132,7 +142,7 @@
 <body>
     <header>
         <div class="leftddabong"><img src="./따봉.svg"></div>
-        <div class="card w-50">
+        <div class="card w-50" id="headercolor">
             <div class="tag1">
                 <h5 class="card-title">텐션을 높2조</h5>
             </div>
@@ -146,7 +156,14 @@
                     <div class="card w-50 my-3" id="card1">
                         <div class="card-body">
                             <div class="tag2">
-                                <h5 class="card-title">우리 텐션을 높2조를 소개합니다.</h5>
+                                <h5 class="card-title">우리 텐션을 높2조를 소개합니다.
+                                    <br>
+                                    <br> 
+                                    <br>우리팀은 P가 4명입니다!
+                                    <br>남들이 보았을때 계획이 없어보이지만
+                                    <br>계획이 설정된다면 끝을 향해 달려가는힘은
+                                    <br>누구보다 못지 않은게 특징입니다!
+                                </h5>
                             </div>
                         </div>
                     </div>
@@ -165,12 +182,12 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> 
             <div class="footer">
-                <div class="fixed inset-x-0 bottom-0 p-4">
+                <div class="fixed inset-x-0 bottom-0">
                     <button
-                        class="sticky-button w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                        팀원 구경 하러가기
+                        class="sticky-button w-full bg-blue-500 hover:bg-red-500 text-white font-bold py-2 px-4 rounded">
+                        ! 팀원 구경 하러가기 !
                     </button>
                 </div>
             </div>
