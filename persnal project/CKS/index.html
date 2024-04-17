@@ -1,70 +1,18 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>메인페이지</title>
+    <title>연습장</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gugi&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Jua&display=swap');
+
         * {
-            font-family: "Gugi", sans-serif;
-        }   현재 이 페이지에 적용된 폰트. 필요시 주석제거 후 사용*/
-        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gugi&display=swap');
-        * {
-            font-family: "Gugi", sans-serif;
+            font-family: "Jua", sans-serif;
         }
-        .ckcard {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        .ckcard2 {
-            margin-bottom: 100px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        .ckcard2 .card {
-            margin-bottom: 20px;
-            height: auto;
-            background-position: right;
-            background-size: contain;
-            background-repeat: no-repeat;
-            padding: 20px;
-        }
-        .card-content {
-            position: relative;
-            z-index: 1;
-        }
-        .card-content .card-title,
-        .card-text {
-            position: relative;
-            z-index: 2;
-        }
-        header {
-            width: 70%;
-            height: 100px;
-            margin: 0px auto 0px auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        #headercolor {
-            background-color: #4c92b1;
-        }
-        .leftddabong {
-            height: 100px;
-            width: 100px;
-        }
-        
-        .container {
-            height: 100%;
-            align-items: center;
-        }
-        
+
         body {
             width: 100vw;
             height: 100vh;
@@ -74,67 +22,85 @@
             background-attachment: fixed;
 
         }
-        .subbody {
+
+        header {
             width: 70%;
-            margin: 0px auto 0px auto;
+            height: 100px;
+            margin: 70px auto 50px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
+        #headercolor {
+            background-color: #4c92b1;
+        }
 
+        .container {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            height: auto;
+
+        }
+
+        .leftddabong {
+            height: 100px;
+            width: 100px;
         }
 
         @keyframes movebg {
             0% {
                 background-position: 0 center;
             }
+
             100% {
                 background-position: -100vw center;
             }
         }
-        .tag1 {
-            margin: 0px auto 0px auto;
-            font-size: 70px;
+        .card {
+            background-position: right;
+            background-size: contain;
+            background-repeat: no-repeat;
         }
-        .tag2 {
-            font-size: 25px;
-        }
-        .ckcard2 .my-3 {
-            padding: 90px 0;
-        }
-        #card1 {
+
+        .card1 {
             background-color: lightgreen;
             background-image: url('https://postfiles.pstatic.net/MjAyNDA0MTZfMjY3/MDAxNzEzMjU3NjcyNTE0.wqzVkXydOoFcfXNrdSEuBu8nLxrijs91igVcwxs7XA8g.VrG6zYF8-GN-WJQuNACM112mSNh3fNFQ-pP0qKo4rfkg.PNG/enfp-removebg-preview.png?type=w966');
         }
-        #card2 {
+
+        .card2 {
             background-color: lemonchiffon;
             background-image: url('https://postfiles.pstatic.net/MjAyNDA0MTZfNTkg/MDAxNzEzMjU3Njc4MDQ5.mIEDX1mwUtBDwB6zWdquIVrjDYOMviE3fjQedx9KTZQg.3--Dw9s50HGkg91aUW11xPByaygoE_lImxMD_sldfd0g.PNG/estp-removebg-preview.png?type=w966');
         }
-        #card3 {
 
+        .card3 {
             background-color: lightcoral;
             background-image: url('https://postfiles.pstatic.net/MjAyNDA0MTZfMjY2/MDAxNzEzMjU3NjgzMzY4.VVmq3FfRCpEWPLldzcLseDcI5P9OF6_oqJc1lqlha54g.eOMVMKo6M1w8R0VOKI6OqAiQ6-FBydJiovkrKChUG6Ug.PNG/isfp-removebg-preview.png?type=w966');
         }
+
         .footer {
             height: 200px;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
+            position: fixed;
+            bottom: 0px;
+            left: auto;
+            right: auto;
             text-align: center;
             z-index: 10;
         }
+        
         .sticky-button {
             position: sticky;
-            bottom: 100px;
             z-index: 10;
             width: 600px;
             height: 50px;
         }
-
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var button = document.querySelector(".sticky-button");
             button.addEventListener("click", function () {
-                window.location.href = "../LYH/select.html";//상대경로
+                window.location.href = "../LYH/select.html";
             });
         });
     </script>
@@ -143,53 +109,63 @@
     <header>
         <div class="leftddabong"><img src="./따봉.svg"></div>
         <div class="card w-50" id="headercolor">
-            <div class="tag1">
+            <div style="margin: 10px auto 0px auto; font-size: 70px;">
                 <h5 class="card-title">텐션을 높2조</h5>
             </div>
         </div>
         <div class="leftddabong"><img src="./따봉.svg"></div>
     </header>
     <div class="subbody">
-        <div class="wrap">
-            <div class="container">
-                <div class="ckcard2">
-                    <div class="card w-50 my-3" id="card1">
-                        <div class="card-body">
-                            <div class="tag2">
-                                <h5 class="card-title">우리 텐션을 높2조를 소개합니다.
-                                    <br>
-                                    <br> 
-                                    <br>우리팀은 P가 4명입니다!
-                                    <br>남들이 보았을때 계획이 없어보이지만
-                                    <br>계획이 설정된다면 끝을 향해 달려가는힘은
-                                    <br>누구보다 못지 않은게 특징입니다!
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card w-50 my-3" id="card2">
-                        <div class="card-body">
-                            <div class="tag2">
-                                <h5 class="card-title">추구하는 궁극적인 목표</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card w-50 my-3" id="card3">
-                        <div class="card-body">
-                            <div class="tag2">
-                                <h5 class="card-title">우리팀의 약속</h5>
-                            </div>
-                        </div>
+        <div class="container">
+            <div class="card1 card w-50 my-3">
+                <div class="card-body">
+                    <div style="font-size: 25px;">
+                        <h5 class="card-title">우리 텐션을 높2조를 소개합니다.
+                            <br>
+                            <br>
+                            <br>우리팀은 P가 4명입니다!
+                            <br>남들이 보았을때 계획이 없어보이지만
+                            <br>계획이 설정된다면 끝을 향해 달려가는힘은
+                            <br>누구보다 못지 않은게 특징입니다!
+                        </h5>
                     </div>
                 </div>
-            </div> 
-            <div class="footer">
-                <div class="fixed inset-x-0 bottom-0">
-                    <button
-                        class="sticky-button w-full bg-blue-500 hover:bg-red-500 text-white font-bold py-2 px-4 rounded">
-                        ! 팀원 구경 하러가기 !
-                    </button>
+            </div>
+            <div class="card2 card w-50 my-3">
+                <div class="card-body">
+                    <div style="font-size: 25px;">
+                        <h5 class="card-title">추구하는 궁극적인 목표
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                        </h5>
+                    </div>
                 </div>
+            </div>
+            <div class="card3 card w-50 my-3">
+                <div class="card-body">
+                    <div style="font-size: 25px;">
+                        <h5 class="card-title">우리팀의 약속
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="fixed inset-x-0 bottom-0">
+                <button
+                    class="sticky-button w-full bg-blue-500 hover:bg-red-500 text-white font-bold py-2 px-4 rounded">
+                    ! 팀원 구경 하러가기 !
+                </button>
             </div>
         </div>
     </div>
