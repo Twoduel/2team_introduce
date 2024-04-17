@@ -39,14 +39,11 @@
 
         // 최초 DB 가져오기
         let docs = await getDocs(collection(db, "members"));
-        console.log(docs)
 
         // 가져온 DB를 배열로 저장
         let sortedDocs = [];
         docs.forEach((doc) => {
             sortedDocs.push(doc);
-            console.log(sortedDocs)
-            console.log(doc)
         });
 
         // timestamp를 기준으로 내림차순 정렬
@@ -90,9 +87,13 @@
             $('#cards').append(temp_html);
 
             //카드 클릭 리스너 등록 및 클릭 시 id 넘기기
-            let card = document.querySelector(`[data-id="${cardId}"]`);
+            const card = document.querySelector(`[data-id="${cardId}"]`);
+            const id = card.getAttribute('data-id');
             card.addEventListener('click', async function () {
-                window.location.href = "query(test).html";
+                localStorage.setItem("ID", id);
+                window.location.href = "query(test).html"
+                console.log(card);
+                console.log(id);
             });
         });
 
