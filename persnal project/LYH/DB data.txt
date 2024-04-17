@@ -1,0 +1,28 @@
+blog "블로그 없음" (문자열)
+
+date "2024-04-09" (문자열)
+
+email "이메일 없음" (문자열)
+
+github "깃헙 없음" (문자열)
+
+hobby "축구" (문자열)
+
+id "38551670-400e-e753-b462c2534955" (문자열)
+
+image "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F83c75a39-3aba-4ba4-a792-7aefe4b07895%2F8ac93df4-6f13-426d-8c29-976b0aa18dce%2Fenfp.png?id=930a3242-c01c-4a37-80bf-e9964c4f8cac&table=block&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=800&userId=81832d12-bc15-4ae9-a090-4b1b1ca1bbe6&cache=v2" (문자열)
+
+live "경기 광주" (문자열)
+
+mbti "ENTJ" (문자열)
+
+name "김철수" (문자열)
+
+password "000000" (문자열)
+
+point "없음" (문자열)
+
+style "독고다이" (문자열)
+
+timestamp 2024년 4월 16일 오후 8시 32분 47초 UTC+9 (타임스탬프)
+
