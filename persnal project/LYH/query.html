@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조회 페이지</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+        * {
+            font-family: "Jua", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Jersey+15&display=swap');
+
+        header {
+            height: 100px;
+
+            background-color: green;
+
+            display: flex;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .home {
+            margin-left: 100px;
+        }
+
+        .header_intro {
+            margin-left: auto;
+            margin-right: 100px;
+        }
+
+        .intro_team {
+            height: 100px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .intro_team {
+            margin-top: 30px;
+            font-size: 120px;
+
+            background-color: skyblue;
+        }
+
+        .write {
+            width: 80px;
+
+            margin-top: 30px;
+            margin-left: auto;
+        }
+
+        .card-group {
+            margin-top: 10px;
+        }
+
+        .card-group .card {
+            flex: 1 0 300px;
+            cursor: pointer;
+        }
+
+        .card-group .card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: 614px;
+            object-fit: cover;
+        }
+
+        .card-title {
+            text-align: center;
+        }
+
+        .card-mbti {
+            text-align: center;
+        }
+
+        body {
+            font-size: 10px;
+            width: 60%;
+
+            margin: 0px auto 0px auto;
+        }
+
+        header {
+            height: 100px;
+
+            background-color: green;
+
+            display: flex;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .home {
+            margin-left: 100px;
+        }
+
+        .header_intro {
+            margin-left: auto;
+            margin-right: 100px;
+        }
+
+        .intro_team {
+            height: 100px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .intro_team {
+            margin-top: 30px;
+            font-size: 120px;
+
+            background-color: skyblue;
+        }
+
+        .write {
+            width: 5vw;
+
+            margin-top: 30px;
+        }
+
+        .Write-Modal-btn {
+            margin-left: auto;
+        }
+
+        .card-group {
+            margin-top: 10px;
+        }
+
+        .card-group .card {
+            flex: 1 0 300px;
+            cursor: pointer;
+        }
+
+        .card-group .card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+
+        .card-name {
+            text-align: center;
+        }
+
+        .card-mbti {
+            text-align: center;
+        }
+
+        .modal-fade {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-dialog {
+            width: 900px;
+            height: 100%;
+        }
+
+        .modal-body {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-body .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-footer {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+
+        .modal-footer .btn {
+            width: 80px;
+            height: 40px;
+            font-size: 18px;
+        }
+
+        .sub-modal-body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .upload-image-group {
+            width: 250px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .upload-image-group .btn {
+            width: 100px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin-top: 5px;
+        }
+
+        .writeimg {
+            width: 225px;
+            height: 300px;
+            overflow: hidden;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 0 1px gray inset;
+        }
+
+        #image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .writeinform {
+            width: 600px;
+
+            margin: 0px auto 0px auto;
+        }
+
+        .inputname {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 180px;
+        }
+
+        .password-group .col-auto {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        body {
+            width: 70%;
+            background-color: white;
+            margin: 0px auto 0px auto;
+        }
+
+        .wrap-introduce {
+            background-color: dodgerblue;
+        }
+
+        .introduce {
+            margin: 5% auto 0 auto;
+            text-align: center;
+            font-size: 4vh;
+            border: 1px solid darkblue;
+            background-color: dodgerblue;
+            width: 100%;
+            height: 50vh;
+            background-image: url("https://postfiles.pstatic.net/MjAyNDA0MTdfMTQg/MDAxNzEzMzU3NTMyMjM5.ffxolDq2cuLY6VChAVmj_xXJ3C7t9y-OjCEYEtG_4OAg.jo9LOWOlvJvkpTnPRlqblBEJ3-SagKg9tzlA5ee7tn8g.JPEG/%EC%A0%9C%EB%AA%A9_%EC%97%86%EC%9D%8C-1.jpg?type=w966");
+            background-position: center;
+            background-size: cover;
+
+        }
+
+        .introducetext {
+            margin-bottom: 50%;
+            margin-top: 3%;
+
+        }
+
+        .aboutme {
+            margin: 5% auto 5% auto;
+            text-align: center;
+            font-size: 5vh;
+            width: 100%
+        }
+
+        .parent {
+            width: 100%;
+            height: 30vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profilecard {
+            width: 15%;
+            height: 100%;
+
+            margin-top: 2%;
+            margin-left: 8%;
+
+        }
+
+        .profileimg {
+            width: 20vw;
+            height: 26.6vh;
+            margin: 0px auto 0px auto;
+            border-radius: 5px;
+        }
+
+        .thumbnail {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .cardbody1 {
+            width: 100%;
+            margin-left: 50%;
+        }
+
+        .cardbody2 {
+            width: 100%;
+            height: 100%;
+        }
+
+        .card-body2 {
+            width: 90%;
+            height: 10%;
+            margin: 0 auto 0 auto;
+            text-align: center;
+            font-size: 3vh;
+
+        }
+
+        .cardbody {
+            witdh: 100%
+        }
+
+        .card2 {
+            margin-top: 50px;
+
+        }
+
+        .profile {
+            margin-top: 3%;
+            margin-left: 5%;
+            width: 25%;
+            height: 75%;
+            display: inline-block;
+
+        }
+
+        .card-title {
+            font-size: 4vh;
+            color: deepskyblue;
+        }
+
+        .card-text {
+            width: 100%;
+            height: 2vh;
+            font-size: 3vh;
+            text-align: center;
+            margin-top: 5%;
+        }
+
+        .card-title {
+            font-size: 3vh;
+        }
+
+
+        .introduce2 {
+            margin: 5% 20% 10% auto;
+            font-size: 5em;
+            margin-left: 3%;
+            width: 100%;
+            margin-top: 12vh;
+            font-size: 3vh
+        }
+
+        .introduce2text {
+            margin-left: 5%;
+            font-size: 2rem;
+        }
+
+        .point {
+            margin-top: 3%;
+        }
+
+        footer {
+            border-top: 1px solid #e4e4e4;
+            background-color: #f8f9fa;
+            width: 100%;
+            height: 50%;
+
+        }
+
+        .footer-github {
+
+            font-size: 0.9rem;
+            color: #545e6f;
+            margin-bottom: 0.3rem;
+            margin: 0.6rem 0 0 0.6rem;
+
+        }
+
+        .footer-blog {
+            font-size: 0.9rem;
+            color: #545e6f;
+            margin: 0.6rem;
+
+        }
+
+        .footer-email {
+            font-size: 0.9rem;
+            color: #545e6f;
+            margin: 0.6rem;
+
+        }
+
+        .btn2 {
+
+            margin: 5px auto 0px auto;
+
+            text-align: center;
+        }
+
+        .hbbtn {
+            background-color: transparent;
+        }
+
+        .introducename {
+            color: white;
+
+        }
+
+        .profileimg {
+            width: 10vw;
+        }
+
+        .githubicon {
+            width: 2vw;
+        }
+
+        .blogicon {
+            width: 2vw;
+        }
+
+        .emailicon {
+            width: 2vw;
+        }
+
+        .footertext {
+            margin-left: ;
+        }
+
+        .introduce2icon {
+            width: 3vw;
+        }
+
+        .introduce3icon {
+            width: 2.7vw;
+        }
+    </style>
+
+</head>
+
+<body>
+    <script type="module">
+        // Firebase SDK 라이브러리 가져오기
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+        import { getFirestore } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+        import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+        import { getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+        import { doc, setDoc, updateDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+        import { query, where } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyD8o_HmYXbypNnolN-7F240_-IHn8dnKCg",
+            authDomain: "team-introduce-8dc6f.firebaseapp.com",
+            projectId: "team-introduce-8dc6f",
+            storageBucket: "team-introduce-8dc6f.appspot.com",
+            messagingSenderId: "1079285345183",
+            appId: "1:1079285345183:web:86fdfdf2a4f6a72e506baa",
+            measurementId: "G-7M4ME2J2FP"
+        };
+
+        // Firebase 인스턴스 초기화
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // Write 이미지 주소 입력용 modal 선언
+        const UploadImageModal = new bootstrap.Modal(document.getElementById('upload-image-modal'));
+
+        // modify password verification modal 선언
+        const verifyModal = new bootstrap.Modal(document.getElementById('modify-verify-modal'));
+
+        // modify modal 선언
+        const modifyModal = new bootstrap.Modal(document.getElementById('Modify-Modal'));
+
+        // delete modal 선언
+        const deleteModal = new bootstrap.Modal(document.getElementById('delete-modal'));
+
+        // Modify용 모달 이미지 업로드 및 미리보기
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('upload-image-url').addEventListener('input', function () {
+                var url = this.value.trim(); // 입력된 주소를 가져옴
+                var imgPreview = document.getElementById('image-container'); // 이미지를 표시할 요소
+                if (url !== '') { // 주소가 비어 있지 않은 경우
+                    var img = new Image(); // 이미지 객체 생성
+                    img.onload = function () { // 이미지가 로드되면 실행되는 함수
+                        imgPreview.innerHTML = ''; // 이미지 컨테이너 초기화
+                        imgPreview.appendChild(img); // 이미지 추가
+                    };
+                    img.onerror = function () { // 이미지 로드 중 오류가 발생한 경우
+                        imgPreview.innerHTML = ''; // 이미지 컨테이너 초기화
+                        alert('이미지를 불러올 수 없습니다.');
+                    };
+                    img.src = url; // 이미지 주소 설정
+                } else {
+                    imgPreview.innerHTML = ''; // 이미지 컨테이너 초기화
+                }
+            });
+        });
+
+        // 업로드 이미지 주소 공백 검사, 공백 없을 시 확인버튼 활성화
+        function checkEmptyURL() {
+            let URL = $('#upload-image-url').val().trim();
+
+            if (URL !== '') {
+                document.getElementById('Urlconfirmbtn').disabled = false;
+            } else {
+                document.getElementById('Urlconfirmbtn').disabled = true;
+            }
+        }
+
+        // 업로드 이미지 주소값 추적
+        document.getElementById('upload-image-url').addEventListener('input', checkEmptyURL);
+
+        //데이터 선언
+        let name;
+        let hobby;
+        let mbti;
+        let live;
+        let style;
+        let point;
+        let github;
+        let blog;
+        let email;
+        let pw;
+        let id;
+        let image;
+        let date;
+
+        //id 값 가져오기
+        const id2 = new URLSearchParams(location.search).get('id');
+
+        //DB에서 id 값에 맞는 특정 데이터 가져오기
+        const q = query(
+            collection(db, 'members'),
+            where('id', '==', id2)
+        );
+
+        const querySnapshot = await getDocs(q);
+        querySnapshot.forEach((el) => {
+            name = el.data().name;
+            mbti = el.data().mbti;
+            hobby = el.data().hobby;
+            live = el.data().live;
+            style = el.data().style;
+            point = el.data().point;
+            github = el.data().github;
+            blog = el.data().blog;
+            email = el.data().email;
+            pw = el.data().password;
+            image = el.data().image;
+            date = el.data().date;
+            id = el.data().id;
+
+        });
+
+        //해당 정보를 해당 위치에 기입
+        $("#name").text(name);
+        $("#name-text").text(name);
+        $("#mbti").text(mbti);
+        $("#birth").text(date);
+        $("#hobby").text(hobby);
+        $("#live").text(live);
+        $("#style").text(style);
+        $("#point").text(point);
+        $("#github").text(github);
+        $("#blog").text(blog);
+        $("#email").text(email);
+        $("#profileimg").attr("src", image);
+
+
+        $("#modifconfirmbtn").click(async function () { //수정버튼을 누르면
+            let modipw = $('#modipw').val();
+
+            if (modipw == pw) { // 패스워드가 일치할 때
+                verifyModal.hide();
+                modifyModal.show();
+
+                $("#upload-image-url").val(image);
+                updateImagePreview(image);
+                $("#modiname").val(name);
+                $("#modimbti").val(mbti);
+                $("#modiDateInput").val(date);
+                $("#modihobby").val(hobby);
+                $("#modilive").val(live);
+                $("#modistyle").val(style);
+                $("#modipoint").val(point);
+                $("#modiGithub").val(github);
+                $("#modiBlog").val(blog);
+                $("#modiEmail").val(email);
+            } else {
+                alert('비밀번호를 확인해주세요')
+                return;
+            }
+        });
+
+        // 이미지 URL 입력값 변경 시 미리보기 갱신
+        $("#upload-image-url").on('input', function () {
+            let imageUrl = $(this).val();
+            updateImagePreview(imageUrl);
+        });
+
+        // 이미지 미리보기 업데이트 함수
+        function updateImagePreview(imageUrl) {
+            // 이미지를 미리보여줄 컨테이너 선택
+            let imageContainer = $("#image-container");
+
+            // 이미지 미리보기 엘리먼트 생성 또는 갱신
+            if (imageUrl) {
+                // 이미지 URL이 있을 때 이미지를 보여줍니다.
+                imageContainer.html(`<img src="${imageUrl}" alt="Image Preview">`);
+            } else {
+                // 이미지 URL이 없을 때 미리보기를 비웁니다.
+                imageContainer.empty();
+            }
+        }
+
+        // 등록하기 Input 공백 검사, 공백 없을 시 확인버튼 활성화
+        function checkEmpty() {
+            // input 필드의 값을 가져옴
+            let modname = $('#modiname').val().trim()
+            let modmbti = $('#modimbti').val().trim()
+            let modhobby = $('#modihobby').val().trim()
+            let modlive = $('#modilive').val().trim()
+            let modstyle = $('#modistyle').val().trim()
+            let modpoint = $('#modipoint').val().trim()
+            let modgithub = $('#modiGithub').val().trim()
+            let modblog = $('#modiBlog').val().trim()
+            let modemail = $('#modiEmail').val().trim()
+            let modimage = $('#upload-image-url').val().trim()
+            let moddate = $('#modiDateInput').val().trim()
+
+            if (modimage !== '' && modname !== '' && modmbti !== 0 && moddate !== '' && modhobby !== '' && modlive !== '' && modpoint !== '' && modstyle !== '' && modgithub !== '' && modblog !== '' && modemail !== '') {
+                document.getElementById('modifybtn2').disabled = false;
+            } else {
+                document.getElementById('modifybtn2').disabled = true;
+            }
+        }
+
+        // 등록하기 Input 값 추적
+        document.getElementById('upload-image-url').addEventListener('input', checkEmpty);
+        document.getElementById('modiname').addEventListener('input', checkEmpty);
+        document.getElementById('modimbti').addEventListener('input', checkEmpty);
+        document.getElementById('modiDateInput').addEventListener('input', checkEmpty);
+        document.getElementById('modihobby').addEventListener('input', checkEmpty);
+        document.getElementById('modilive').addEventListener('input', checkEmpty);
+        document.getElementById('modipoint').addEventListener('textarea', checkEmpty);
+        document.getElementById('modistyle').addEventListener('textarea', checkEmpty);
+        document.getElementById('modiGithub').addEventListener('textarea', checkEmpty);
+        document.getElementById('modiBlog').addEventListener('textarea', checkEmpty);
+        document.getElementById('modiEmail').addEventListener('input', checkEmpty);
+
+
+        $("#modifycancle").click(function () {
+            if (window.confirm("작성을 취소하시겠습니까?")) {
+                var imgPreview = document.getElementById('image-container');
+                imgPreview.innerHTML = '';
+                $('#upload-image-url').val('');
+                $('#modiname').val('');
+                $('#modimbti').val('');
+                $('#modiDateInput').val('');
+                $('#modihobby').val('');
+                $('#modilive').val('');
+                $('#modipoint').val('');
+                $('#modistyle').val('');
+                $('#modiGithub').val('');
+                $('#modiBlog').val('');
+                $('#modiEmail').val('');
+                $('#modipw').val('');
+                alert("취소되었습니다.");
+            }
+        })
+
+        $("#modifybtn2").click(async function () { //수정버튼을 누르면
+
+                let modiname = $('#modiname').val();
+                let modimbti = $('#modimbti').val();
+                let modihobby = $('#modihobby').val();
+                let modilive = $('#modilive').val();
+                let modistyle = $('#modistyle').val();
+                let modipoint = $('#modipoint').val();
+                let modigithub = $('#modiGithub').val();
+                let modiblog = $('#modiBlog').val();
+                let modiemail = $('#modiEmail').val();
+                let modiimage = $('#upload-image-url').val();
+                let modidate = $('#modiDateInput').val();
+
+                const updateRef = doc(db, "members", id);
+
+                await updateDoc(updateRef, { // 데이터를 수정하고
+                    name: modiname,
+                    mbti: modimbti,
+                    hobby: modihobby,
+                    live: modilive,
+                    style: modistyle,
+                    point: modipoint,
+                    github: modigithub,
+                    blog: modiblog,
+                    email: modiemail,
+                    image: modiimage,
+                    date: modidate
+
+                });
+                alert('수정 완료'); // 알람을 띄우고
+                window.location.reload(); // 새로고침한다
+            });
+
+        $("#deletebtn").click(async function () { //삭제 버튼을 누르면
+
+            let delepw = $('#delepw').val();
+
+
+            if (depw == pw) { // 패스워드가 일치할 때
+                const minpRef = doc(db, "members", id);
+                await deleteDoc(minpRef);  // 게시물을 삭제하고
+                alert('삭제 완료') // 알람을 띄우고
+                location.href = `./select.html`;
+            } else {    // 그 외의 경우에
+                alert('비밀번호를 확인해주세요')  // 알람을 띄운다
+            }
+
+        }
+        )
+
+        $("#githubcopy").click(async function () {
+
+            let nowUrl = github
+
+            navigator.clipboard.writeText(nowUrl).then(res => {
+                alert("주소가 복사되었습니다!");
+            })
+
+        }
+        )
+        $("#blogcopy").click(async function () {
+
+            let nowUrl = blog
+
+            navigator.clipboard.writeText(nowUrl).then(res => {
+                alert("주소가 복사되었습니다!");
+            })
+
+        }
+        )
+        $("#emailcopy").click(async function () {
+
+            let nowUrl = email
+
+            navigator.clipboard.writeText(nowUrl).then(res => {
+                alert("주소가 복사되었습니다!");
+            })
+
+        }
+        )
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <div class="introduce">
+        <div class=introducetext>
+            <p>안&nbsp녕&nbsp하&nbsp세&nbsp요.</p>
+            <p>저&nbsp는&nbsp <span class="introducename" id="name"> </span> 입&nbsp니&nbsp다.&nbsp</p>
+            <p>저&nbsp를&nbsp 소&nbsp개&nbsp해&nbsp 드&nbsp릴&nbsp게&nbsp요!</p>
+
+        </div>
+    </div>
+
+
+    <div class="aboutme">
+        <p>ABOUT ME</p>
+    </div>
+
+    <div class="parent">
+        <div class="profilecard">
+            <div class="thumbnail">
+                <a href="./show.html?date_id=${date2}"></a>
+                <img id="profileimg" src="" class="profileimg" alt="...">
+
+            </div>
+            <div class="card-body2">
+                <p id="name-text" class="name-text">이름</p>
+            </div>
+        </div>
+
+
+        <div class="profile">
+            <div class="cardbody1">
+                <div class="card1" style="width: 15rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">생년월일</h5>
+                        <p id="birth" class="card-text"></p>
+                    </div>
+                </div>
+                <div class="card2" style="width: 15rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">취미</h5>
+                        <p id=hobby class="card-text"></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="profile">
+            <div class="cardbody2">
+                <div class="card1" style="width: 15rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">MBTI</h5>
+                        <p id="mbti" class="card-text"></p>
+                    </div>
+                </div>
+                <div class="card2" style="width: 15rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">거주지</h5>
+                        <p id="live" class="card-text"></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="introduce2">
+        <div class="point">
+            <img class="introduce3icon" src="https://cdn-icons-png.flaticon.com/128/456/456257.png" class="" alt="...">
+            <p class="introduce2text">저의 장점은 <span id="point"></span></p>
+        </div>
+        <div class="point">
+            <img class="introduce2icon" src="https://cdn-icons-png.freepik.com/256/2618/2618576.png?semt=sph" class=""
+                alt="...">
+            <p class="introduce2text">저의 협업 스타일은 <span id="style"></span></p>
+        </div>
+    </div>
+
+    <footer>
+        <div>
+            <div class="inner">
+                <p style="font-size: 1.3rem">contact</p>
+                <div class="footer-github"><img class=githubicon
+                        src="https://cdn-icons-png.flaticon.com/128/733/733609.png" class="" alt="..."> Github : <span
+                        id="github"></span>
+                    <button id="githubcopy">복사</button>
+                </div>
+            </div>
+            <div class="footer-blog"><img class=blogicon src="https://cdn-icons-png.flaticon.com/128/49/49334.png"
+                    class="" alt="..."> Blog &nbsp;&nbsp;&nbsp;: <span id="blog"></span>
+                <button id="blogcopy">복사</button>
+            </div>
+            <div class="footer-email"><img class=emailicon src="https://cdn-icons-png.flaticon.com/128/3178/3178158.png"
+                    class="" alt="..."> E-mail : <span id="email"></span><button id="emailcopy">복사</button>
+            </div>
+        </div>
+    </footer>
+
+    <div class="btn2">
+        <button type="button" class="btn btn-info" data-bs-toggle="modal"
+            data-bs-target=#modify-verify-modal>수정</button>
+        <button type="button" class="btn btn-info" data-bs-toggle="modal"
+            data-bs-target=#Delete-modal>삭제</button>
+    </div>
+    </div>
+
+    <!--Modify Password Verification Modal-->
+    <div class="modal" id="modify-verify-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">비밀번호 입력</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3" style="width: 450px;">
+                        <label for="basic-url" class="form-label">비밀번호를 입력해주세요</label>
+                        <div class="password-group row g-3">
+                            <div class="col-auto">
+                                <label for="inputPassword6" class="col-form-label">Password</label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="password" id="modipw" class="form-control"
+                                    aria-describedby="passwordHelpInline" maxlength='6'
+                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                      />
+                            </div>
+                            <div class="col-auto">
+                                <span id="passwordHelpInline" class="form-text">
+                                    Must be 6 numbers.
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer" style="display: flex; justify-content: center;">
+                    <button id="modifconfirmbtn" type="button" class="btn btn-primary">수정</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modify Modal-->
+    <div class="modal" id="Modify-Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">멤버 수정하기</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row sub-modal-body">
+                        <div class="d-flex align-content-center flex-wrap upload-image-group">
+                            <div class="writeimg col-md-4" id="image-container" style="font-size: 20px; color: gray;">사진
+                            </div>
+                            <button class="btn btn-light" data-bs-target="#upload-image-modal"
+                                data-bs-toggle="modal">업로드</button>
+                        </div>
+                        <div class="writeinform coloum">
+                            <div class="coloum">
+                                <div class="row">
+                                    <div class="input-group" style="width: 300px;">
+                                        <input type="text" class="form-control" id="modiname" placeholder="Username"
+                                            aria-label="Username" aria-describedby="basic-addon1">
+                                    </div>
+                                    <div class="input-group" style="width: 300px;">
+                                        <input type="text" class="form-control" id="modimbti" placeholder="MBTI"
+                                            aria-label="MBTI" aria-describedby="basic-addon1">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="margin-top: 25px;">
+                                <label class="profile2" for="basic-url" class="form-label">ㆍ생년월일</label>
+                                <div class="writeDateInput col-md-6">
+                                    <input type="date" class="form-control" id="modiDateInput">
+                                </div>
+                            </div>
+                            <div style="margin-top: 25px;">
+                                <div class="mb-3">
+                                    <label for="basic-url" class="form-label">ㆍ취미</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="modihobby"
+                                            placeholder="축구, 게임, 산책 등" aria-label="축구, 게임, 산책 등"
+                                            aria-describedby="basic-addon4">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="margin-top: 25px;">
+                                <div class="mb-3">
+                                    <label for="basic-url" class="form-label">ㆍ사는 곳</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="modilive"
+                                            placeholder="시군구까지 (Ex. 서울 동작, 경기 광주)" aria-label="시군구까지 (Ex. 서울 동작, 경기 광주)"
+                                            aria-describedby="basic-addon4">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 30px;">
+                        <div class="input-group">
+                            <span class="inputname input-group-text">나의 장점은</span>
+                            <textarea id="modipoint" class="form-control" aria-label="With textarea"
+                                rows="2"></textarea>
+                        </div>
+                        <div class="input-group" style="margin-top: 30px;">
+                            <span class="inputname input-group-text">나의 협업 스타일은</span>
+                            <textarea id="modistyle" class="form-control" aria-label="With textarea"
+                                rows="2"></textarea>
+                        </div>
+                        <div class="input-group" style="margin-top: 30px;">
+                            <span class="inputname input-group-text">Github 주소</span>
+                            <textarea id="modiGithub" class="form-control" aria-label="With textarea"
+                                rows="1"></textarea>
+                        </div>
+                        <div class="input-group" style="margin-top: 30px;">
+                            <span class="inputname input-group-text">블로그 주소</span>
+                            <textarea id="modiBlog" class="form-control" aria-label="With textarea" rows="1"></textarea>
+                        </div>
+                        <div class="input-group" style="margin-top: 30px;">
+                            <span class="inputname input-group-text">e-mail</span>
+                            <textarea id="modiEmail" class="form-control" aria-label="With textarea"
+                                rows="1"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="modifycancle" type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        style="margin-left: auto;">취소</button>
+                    <button id="modifybtn2" type="button" class="btn btn-primary" disabled>수정</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modify Image URL Input Modal-->
+    <div class="modal" id="upload-image-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">이미지 주소 입력</h5>
+                    <button type="button" id="writemodalclosebtn" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3" style="width: 450px;">
+                        <label for="basic-url" class="form-label">이미지 주소를 입력해주세요</label>
+                        <div class="input-group" style="width: 450px;">
+                            <input type="text" class="form-control" id="upload-image-url"
+                                aria-describedby="basic-addon3 basic-addon4">
+                        </div>
+                        <div class="form-text" id="basic-addon4">3x4비율의 사진이 가장 이쁩니다</div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="display: flex; justify-content: center;">
+                    <button type="button" class="btn btn-secondary" data-bs-target="#WriteModal"
+                        data-bs-toggle="modal">취소</button>
+                    <button type="button" id="Urlconfirmbtn" class="btn btn-primary" data-bs-target="#Modify-Modal"
+                        data-bs-toggle="modal" disabled>확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Delete Password Verification Modal-->
+    <div class="modal" id="delete-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">비밀번호 입력</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3" style="width: 450px;">
+                        <label for="basic-url" class="form-label">비밀번호를 입력해주세요</label>
+                        <div class="password-group row g-3">
+                            <div class="col-auto">
+                                <label for="inputPassword6" class="col-form-label">Password</label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="password" id="delepw" class="form-control"
+                                    aria-describedby="passwordHelpInline">
+                            </div>
+                            <div class="col-auto">
+                                <span id="passwordHelpInline" class="form-text">
+                                    Must be 6 numbers.
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer" style="display: flex; justify-content: center;">
+
+                    <button id="deletebtn" type="button" class="btn btn-primary">삭제</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
