@@ -628,17 +628,17 @@
         function checkEmpty() {
             // input 필드의 값을 가져옴
             let modname = $('#modname').val().trim()
-                let modmbti = $('#modmbti').val().trim()
-                let modhobby = $('#modhobby').val().trim()
-                let modlive = $('#modlive').val().trim()
-                let modstyle = $('#modstyle').val().trim()
-                let modpoint = $('#modpoint').val().trim()
-                let mgithub = $('#WriteMyGithub').val().trim()
-                let mblog = $('#WriteMyBlog').val().trim()
-                let memail = $('#WriteMyEmail').val().trim()
-                let mimage = $('#upload-image-url').val().trim()
-                let mdate = $('#WriteDateInput').val().trim()
-                let depw = $('#writepw').val().trim()
+            let modmbti = $('#modmbti').val().trim()
+            let modhobby = $('#modhobby').val().trim()
+            let modlive = $('#modlive').val().trim()
+            let modstyle = $('#modstyle').val().trim()
+            let modpoint = $('#modpoint').val().trim()
+            let modgithub = $('#WriteMyGithub').val().trim()
+            let modblog = $('#WriteMyBlog').val().trim()
+            let modemail = $('#WriteMyEmail').val().trim()
+            let modimage = $('#upload-image-url').val().trim()
+            let moddate = $('#WriteDateInput').val().trim()
+            let depw = $('#writepw').val().trim()
 
             if (modimage !== '' && modname !== '' && modmbti !== 0 && moddate !== '' && modhobby !== '' && modlive !== '' && modpoint !== '' && modstyle !== '' && modgithub !== '' && modblog !== '' && modemail !== '' && depw !== '') {
                 document.getElementById('modifybtn2').disabled = false;
@@ -647,10 +647,19 @@
             }
         }
 
-
-
-
-
+        // 등록하기 Input 값 추적
+        document.getElementById('upload-image-url').addEventListener('input', checkEmpty);
+        document.getElementById('modname').addEventListener('input', checkEmpty);
+        document.getElementById('modmbti').addEventListener('input', checkEmpty);
+        document.getElementById('WriteDateInput').addEventListener('input', checkEmpty);
+        document.getElementById('modhobby').addEventListener('input', checkEmpty);
+        document.getElementById('modlive').addEventListener('input', checkEmpty);
+        document.getElementById('modpoint').addEventListener('textarea', checkEmpty);
+        document.getElementById('modstyle').addEventListener('textarea', checkEmpty);
+        document.getElementById('WriteMyGithub').addEventListener('textarea', checkEmpty);
+        document.getElementById('WriteMyBlog').addEventListener('textarea', checkEmpty);
+        document.getElementById('WriteMyEmail').addEventListener('input', checkEmpty);
+        document.getElementById('writepw').addEventListener('input', checkEmpty);
 
         $("#modifybtn2").click(async function () { //수정버튼을 누르면
 
@@ -1018,7 +1027,7 @@
     </div>
 
 
-     <!--delete Modal-->
+    <!--delete Modal-->
     <div class="modal" id="delete-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
