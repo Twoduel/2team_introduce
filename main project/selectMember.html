@@ -531,13 +531,19 @@
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
 
-        // Write용 modal 선언
-        const WriteModal = new bootstrap.Modal(document.getElementById('WriteModal'));
-
         // Write 이미지 주소 입력용 modal 선언
         const UploadImageModal = new bootstrap.Modal(document.getElementById('upload-image-modal'));
 
-        // Writh용 모달 이미지 업로드 및 미리보기
+        // modify password verification modal 선언
+        const verifyModal = new bootstrap.Modal(document.getElementById('modify-verify-modal'));
+
+        // modify modal 선언
+        const modifyModal = new bootstrap.Modal(document.getElementById('Modify-Modal'));
+
+        // delete modal 선언
+        const deleteModal = new bootstrap.Modal(document.getElementById('delete-modal'));
+
+        // Modify용 모달 이미지 업로드 및 미리보기
         document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('upload-image-url').addEventListener('input', function () {
                 var url = this.value.trim(); // 입력된 주소를 가져옴
@@ -572,7 +578,6 @@
 
         // 업로드 이미지 주소값 추적
         document.getElementById('upload-image-url').addEventListener('input', checkEmptyURL);
-
 
         //데이터 선언
         let name;
@@ -616,7 +621,6 @@
 
         });
 
-
         //해당 정보를 해당 위치에 기입
         $("#name").text(name);
         $("#name-text").text(name);
@@ -632,26 +636,66 @@
         $("#profileimg").attr("src", image);
 
 
+        $("#modifconfirmbtn").click(async function () { //수정버튼을 누르면
+            let modipw = $('#modipw').val();
 
+            if (modipw == pw) { // 패스워드가 일치할 때
+                verifyModal.hide();
+                modifyModal.show();
+
+                $("#upload-image-url").val(image);
+                updateImagePreview(image);
+                $("#modiname").val(name);
+                $("#modimbti").val(mbti);
+                $("#modiDateInput").val(date);
+                $("#modihobby").val(hobby);
+                $("#modilive").val(live);
+                $("#modistyle").val(style);
+                $("#modipoint").val(point);
+                $("#modiGithub").val(github);
+                $("#modiBlog").val(blog);
+                $("#modiEmail").val(email);
+            } else {
+                alert('비밀번호를 확인해주세요')
+                return;
+            }
+        });
+
+        // 이미지 URL 입력값 변경 시 미리보기 갱신
+        $("#upload-image-url").on('input', function () {
+            let imageUrl = $(this).val();
+            updateImagePreview(imageUrl);
+        });
+
+        // 이미지 미리보기 업데이트 함수
+        function updateImagePreview(imageUrl) {
+            // 이미지를 미리보여줄 컨테이너 선택
+            let imageContainer = $("#image-container");
+
+            // 이미지 미리보기 엘리먼트 생성 또는 갱신
+            if (imageUrl) {
+                imageContainer.html(`<img src="${imageUrl}" alt="Image Preview">`);
+            } else {
+                imageContainer.empty();
+            }
+        }
 
         // 등록하기 Input 공백 검사, 공백 없을 시 확인버튼 활성화
-
         function checkEmpty() {
             // input 필드의 값을 가져옴
-            let modname = $('#modname').val().trim()
-            let modmbti = $('#modmbti').val().trim()
-            let modhobby = $('#modhobby').val().trim()
-            let modlive = $('#modlive').val().trim()
-            let modstyle = $('#modstyle').val().trim()
-            let modpoint = $('#modpoint').val().trim()
-            let modgithub = $('#WriteMyGithub').val().trim()
-            let modblog = $('#WriteMyBlog').val().trim()
-            let modemail = $('#WriteMyEmail').val().trim()
+            let modname = $('#modiname').val().trim()
+            let modmbti = $('#modimbti').val().trim()
+            let modhobby = $('#modihobby').val().trim()
+            let modlive = $('#modilive').val().trim()
+            let modstyle = $('#modistyle').val().trim()
+            let modpoint = $('#modipoint').val().trim()
+            let modgithub = $('#modiGithub').val().trim()
+            let modblog = $('#modiBlog').val().trim()
+            let modemail = $('#modiEmail').val().trim()
             let modimage = $('#upload-image-url').val().trim()
-            let moddate = $('#WriteDateInput').val().trim()
-            let depw = $('#writepw').val().trim()
+            let moddate = $('#modiDateInput').val().trim()
 
-            if (modimage !== '' && modname !== '' && modmbti !== 0 && moddate !== '' && modhobby !== '' && modlive !== '' && modpoint !== '' && modstyle !== '' && modgithub !== '' && modblog !== '' && modemail !== '' && depw !== '') {
+            if (modimage !== '' && modname !== '' && modmbti !== 0 && moddate !== '' && modhobby !== '' && modlive !== '' && modpoint !== '' && modstyle !== '' && modgithub !== '' && modblog !== '' && modemail !== '') {
                 document.getElementById('modifybtn2').disabled = false;
             } else {
                 document.getElementById('modifybtn2').disabled = true;
@@ -660,61 +704,16 @@
 
         // 등록하기 Input 값 추적
         document.getElementById('upload-image-url').addEventListener('input', checkEmpty);
-        document.getElementById('modname').addEventListener('input', checkEmpty);
-        document.getElementById('modmbti').addEventListener('input', checkEmpty);
-        document.getElementById('WriteDateInput').addEventListener('input', checkEmpty);
-        document.getElementById('modhobby').addEventListener('input', checkEmpty);
-        document.getElementById('modlive').addEventListener('input', checkEmpty);
-        document.getElementById('modpoint').addEventListener('textarea', checkEmpty);
-        document.getElementById('modstyle').addEventListener('textarea', checkEmpty);
-        document.getElementById('WriteMyGithub').addEventListener('textarea', checkEmpty);
-        document.getElementById('WriteMyBlog').addEventListener('textarea', checkEmpty);
-        document.getElementById('WriteMyEmail').addEventListener('input', checkEmpty);
-        document.getElementById('writepw').addEventListener('input', checkEmpty);
-
-        $("#modifybtn2").click(async function () { //수정버튼을 누르면
-
-
-            let depw = $('#writepw').val();
-
-            if (depw == pw) { // 패스워드가 일치할 때
-                let modname = $('#modname').val();
-                let modmbti = $('#modmbti').val();
-                let modhobby = $('#modhobby').val();
-                let modlive = $('#modlive').val();
-                let modstyle = $('#modstyle').val();
-                let modpoint = $('#modpoint').val();
-                let mgithub = $('#WriteMyGithub').val();
-                let mblog = $('#WriteMyBlog').val();
-                let memail = $('#WriteMyEmail').val();
-                let mimage = $('#upload-image-url').val();
-                let mdate = $('#WriteDateInput').val();
-
-                const updateRef = doc(db, "members", id);
-
-                await updateDoc(updateRef, { // 데이터를 수정하고
-                    name: modname,
-                    mbti: modmbti,
-                    hobby: modhobby,
-                    live: modlive,
-                    style: modstyle,
-                    point: modpoint,
-                    github: mgithub,
-                    blog: mblog,
-                    email: memail,
-                    image: mimage,
-                    date: mdate
-
-                });
-                alert('수정 완료'); // 알람을 띄우고
-                window.location.reload(); // 새로고침한다
-            } else {
-                alert('비밀번호를 확인해주세요')
-                return;
-            }
-
-        });
-
+        document.getElementById('modiname').addEventListener('input', checkEmpty);
+        document.getElementById('modimbti').addEventListener('input', checkEmpty);
+        document.getElementById('modiDateInput').addEventListener('input', checkEmpty);
+        document.getElementById('modihobby').addEventListener('input', checkEmpty);
+        document.getElementById('modilive').addEventListener('input', checkEmpty);
+        document.getElementById('modipoint').addEventListener('textarea', checkEmpty);
+        document.getElementById('modistyle').addEventListener('textarea', checkEmpty);
+        document.getElementById('modiGithub').addEventListener('textarea', checkEmpty);
+        document.getElementById('modiBlog').addEventListener('textarea', checkEmpty);
+        document.getElementById('modiEmail').addEventListener('input', checkEmpty);
 
 
         $("#modifycancle").click(function () {
@@ -722,20 +721,54 @@
                 var imgPreview = document.getElementById('image-container');
                 imgPreview.innerHTML = '';
                 $('#upload-image-url').val('');
-                $('#WriteNameInput').val('');
-                $('#WriteMBTIInput').val('');
-                $('#WriteDateInput').val('');
-                $('#WriteHobbyInput').val('');
-                $('#WriteLiveInput').val('');
-                $('#WriteMyPoint').val('');
-                $('#WriteMyStyle').val('');
-                $('#WriteMyGithub').val('');
-                $('#WriteMyBlog').val('');
-                $('#WriteMyEmail').val('');
-                $('#PasswordInput').val('');
+                $('#modiname').val('');
+                $('#modimbti').val('');
+                $('#modiDateInput').val('');
+                $('#modihobby').val('');
+                $('#modilive').val('');
+                $('#modipoint').val('');
+                $('#modistyle').val('');
+                $('#modiGithub').val('');
+                $('#modiBlog').val('');
+                $('#modiEmail').val('');
+                $('#modipw').val('');
                 alert("취소되었습니다.");
             }
         })
+
+        $("#modifybtn2").click(async function () { //수정버튼을 누르면
+
+            let modiname = $('#modiname').val();
+            let modimbti = $('#modimbti').val();
+            let modihobby = $('#modihobby').val();
+            let modilive = $('#modilive').val();
+            let modistyle = $('#modistyle').val();
+            let modipoint = $('#modipoint').val();
+            let modigithub = $('#modiGithub').val();
+            let modiblog = $('#modiBlog').val();
+            let modiemail = $('#modiEmail').val();
+            let modiimage = $('#upload-image-url').val();
+            let modidate = $('#modiDateInput').val();
+
+            const updateRef = doc(db, "members", id);
+
+            await updateDoc(updateRef, { // 데이터를 수정하고
+                name: modiname,
+                mbti: modimbti,
+                hobby: modihobby,
+                live: modilive,
+                style: modistyle,
+                point: modipoint,
+                github: modigithub,
+                blog: modiblog,
+                email: modiemail,
+                image: modiimage,
+                date: modidate
+
+            });
+            alert('수정 완료'); // 알람을 띄우고
+            window.location.reload(); // 새로고침한다
+        });
 
         $("#deletebtn").click(async function () { //삭제 버튼을 누르면
 
