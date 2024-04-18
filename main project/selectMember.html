@@ -33,9 +33,11 @@
 
 
         header {
-            margin: 30px 0px 30px 0px;
+            height: 100px;
+
+
             display: flex;
-            justify-content: center;
+            justify-items: center;
             align-items: center;
         }
 
@@ -97,6 +99,21 @@
             text-align: center;
         }
 
+        header {
+            margin: 30px 0px 30px 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .logo {
+            width: 400px;
+            height: 120px;
+
+            cursor: pointer;
+        }
+
         body {
             font-size: 10px;
             width: 60%;
@@ -104,6 +121,12 @@
             margin: 0px auto 0px auto;
         }
 
+        header {
+            height: 100px;
+            display: flex;
+            justify-items: center;
+            align-items: center;
+        }
 
         .home {
             margin-left: 100px;
@@ -231,6 +254,10 @@
             box-shadow: 0 0 0 1px gray inset;
         }
 
+        .card-body {
+            width: 100%;
+        }
+
         #image-container img {
             width: 100%;
             height: 100%;
@@ -257,109 +284,108 @@
         }
 
         body {
-            width: 60%;
+            width: 70%;
             background-color: white;
             margin: 0px auto 0px auto;
         }
-
-        .navbar {}
 
         .wrap-introduce {
             background-color: dodgerblue;
         }
 
         .introduce {
-            margin: 5% auto 0 auto;
+            margin: 2% auto 0 auto;
             text-align: center;
             font-size: 4vh;
-            border-radius: 5px;
             background-color: dodgerblue;
             width: 100%;
-            height: 23vh;
-
+            height: 26vh;
+            border-radius: 5px;
 
         }
 
         .introducetext {
-            margin-bottom: 50%;
+            margin-bottom: 40%;
             margin-top: 3%;
 
         }
 
         .aboutme {
-            margin: 5% auto 5% auto;
+            margin: 4% auto 2% auto;
             text-align: center;
             font-size: 5vh;
             width: 100%
         }
 
         .parent {
-            display: block;
             width: 100%;
-            height: 30vh;
-
+            height: 40vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .profilecard {
-            float: left;
-            width: 15%;
-            height: 100%;
+            width: 14.5%;
+            height: 75%;
 
-            margin-top: 2%;
+            margin-top: 0%;
             margin-left: 8%;
-
-        }
-
-        .profileimg {
-
-            width: 20vw;
-            height: 26.6vh;
-            margin: 0px auto 0px auto;
-            border-radius: 5px;
 
         }
 
         .thumbnail {
             width: 100%;
             border-radius: 5px;
-
         }
+
+        .profileimg {
+            width: 100%;
+            height: 26.666666666666666666666vh;
+            margin: 0px auto 0px auto;
+            border-radius: 5px;
+        }
+
 
         .cardbody1 {
             width: 100%;
-            margin-left: 50%;
-
+            height: 100%;
+            margin-left: %;
         }
 
         .cardbody2 {
             width: 100%;
             height: 100%;
-            margin-left: 50%;
-
         }
 
         .card-body2 {
-            width: 90%;
-            height: 10%;
+            width: 100%;
+            height: 20%;
+            margin: 0 auto 0 auto;
             text-align: center;
             font-size: 3vh;
 
         }
 
-        .cardbody {
-            witdh: 100%
+        .card1 {
+            margin: 0 auto 0 auto;
+            width: 100%vw
         }
 
         .card2 {
-            margin-top: 50px;
-
+            margin: 30% auto 0 auto;
+            width: 100%
         }
 
+        .card-body {}
+
+
+
         .profile {
-            margin-top: 3%;
-            margin-left: 5%;
+            margin-top: 0%;
+            margin-left: 10%;
             width: 25%;
-            height: 75%;
+            height: 85%;
             display: inline-block;
 
         }
@@ -371,10 +397,10 @@
 
         .card-text {
             width: 100%;
-            height: 2vh;
+            height: 5vh;
             font-size: 3vh;
             text-align: center;
-            margin-top: 5%;
+            margin-top: 10%;
         }
 
         .card-title {
@@ -383,17 +409,17 @@
 
 
         .introduce2 {
-            margin: 5% 20% 10% auto;
+            margin: 5% 20% 10% 0;
             font-size: 5em;
-            margin-left: 3%;
+            margin-left: 0%;
             width: 100%;
-            margin-top: 12vh;
+            margin-top: 2vh;
             font-size: 3vh
         }
 
         .introduce2text {
             margin-left: 5%;
-            font-size: 2rem;
+            font-size: 2.2vw;
         }
 
         .point {
@@ -401,7 +427,7 @@
         }
 
         footer {
-            border-top: 1px solid #e4e4e4;
+            border-top: 1px solid #5a5656;
             background-color: #f8f9fa;
             width: 100%;
             height: 50%;
@@ -410,7 +436,7 @@
 
         .footer-github {
 
-            font-size: 0.9rem;
+            font-size: 1rem;
             color: #545e6f;
             margin-bottom: 0.3rem;
             margin: 0.6rem 0 0 0.6rem;
@@ -418,14 +444,14 @@
         }
 
         .footer-blog {
-            font-size: 0.9rem;
+            font-size: 1rem;
             color: #545e6f;
             margin: 0.6rem;
 
         }
 
         .footer-email {
-            font-size: 0.9rem;
+            font-size: 1rem;
             color: #545e6f;
             margin: 0.6rem;
 
@@ -442,13 +468,9 @@
             background-color: transparent;
         }
 
-        .btn btn-info writebtn {
-            display: inline-block;
-
-        }
-
         .introducename {
             color: white;
+            font-size: 3vw;
 
         }
 
@@ -480,11 +502,9 @@
             width: 2.7vw;
         }
 
-        .logo {
-            width: 400px;
-            height: 120px;
+        .name-text {
+            width: 100%;
 
-            cursor: pointer;
         }
     </style>
     <script type="module">
@@ -719,10 +739,10 @@
 
         $("#deletebtn").click(async function () { //삭제 버튼을 누르면
 
-            let depw = $('#depw').val();
+            let delepw = $('#delepw').val();
 
 
-            if (depw == pw) { // 패스워드가 일치할 때
+            if (delepw == pw) { // 패스워드가 일치할 때
                 const minpRef = doc(db, "members", id);
                 await deleteDoc(minpRef);  // 게시물을 삭제하고
                 alert('삭제 완료') // 알람을 띄우고
@@ -764,17 +784,17 @@
 
         }
         )
-
-
-
-
     </script>
 
 </head>
 
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
     <header>
-        <img class="logo" src="./로고.png" onclick="location.href='../CKS/index.html'">
+        <img class="logo" src="./로고.png" onclick="location.href='./main.html'">
     </header>
 
     <div class="introduce">
@@ -782,7 +802,6 @@
             <p>안&nbsp녕&nbsp하&nbsp세&nbsp요.</p>
             <p>저&nbsp는&nbsp <span class="introducename" id="name"> </span> 입&nbsp니&nbsp다.&nbsp</p>
             <p>저&nbsp를&nbsp 소&nbsp개&nbsp해&nbsp 드&nbsp릴&nbsp게&nbsp요!</p>
-
         </div>
     </div>
 
@@ -794,6 +813,7 @@
     <div class="parent">
         <div class="profilecard">
             <div class="thumbnail">
+                <a href="./show.html?date_id=${date2}"></a>
                 <img id="profileimg" src="" class="profileimg" alt="...">
 
             </div>
@@ -805,13 +825,13 @@
 
         <div class="profile">
             <div class="cardbody1">
-                <div class="card1" style="width: 15rem;">
+                <div class="card1">
                     <div class="card-body">
                         <h5 class="card-title">생년월일</h5>
                         <p id="birth" class="card-text"></p>
                     </div>
                 </div>
-                <div class="card2" style="width: 15rem;">
+                <div class="card2">
                     <div class="card-body">
                         <h5 class="card-title">취미</h5>
                         <p id=hobby class="card-text"></p>
@@ -823,13 +843,13 @@
 
         <div class="profile">
             <div class="cardbody2">
-                <div class="card1" style="width: 15rem;">
+                <div class="card1">
                     <div class="card-body">
                         <h5 class="card-title">MBTI</h5>
                         <p id="mbti" class="card-text"></p>
                     </div>
                 </div>
-                <div class="card2" style="width: 15rem;">
+                <div class="card2">
                     <div class="card-body">
                         <h5 class="card-title">거주지</h5>
                         <p id="live" class="card-text"></p>
@@ -852,8 +872,8 @@
         </div>
     </div>
 
-    <div>
-        <footer>
+    <footer>
+        <div>
             <div class="inner">
                 <p style="font-size: 1.3rem">contact</p>
                 <div class="footer-github"><img class=githubicon
@@ -863,33 +883,67 @@
                 </div>
             </div>
             <div class="footer-blog"><img class=blogicon src="https://cdn-icons-png.flaticon.com/128/49/49334.png"
-                    class="" alt="..."> Blog &nbsp;&nbsp;&nbsp;: <span id="blog"></span><button
-                    id="blogcopy">복사</button></div>
+                    class="" alt="..."> Blog &nbsp;&nbsp;&nbsp;: <span id="blog"></span>
+                <button id="blogcopy">복사</button>
+            </div>
             <div class="footer-email"><img class=emailicon src="https://cdn-icons-png.flaticon.com/128/3178/3178158.png"
                     class="" alt="..."> E-mail : <span id="email"></span><button id="emailcopy">복사</button>
             </div>
-    </div>
-
+        </div>
     </footer>
 
     <div class="btn2">
-        <button type="button" class="btn btn-info writebtn" data-bs-toggle="modal"
-            data-bs-target=#modify-Modal>수정</button>
-        <button type="button" class="btn btn-info writebtn" data-bs-toggle="modal"
-            data-bs-target=#delete-modal>삭제</button>
+        <button type="button" class="btn btn-info" data-bs-toggle="modal"
+            data-bs-target=#modify-verify-modal>수정</button>
+        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target=#delete-modal>삭제</button>
     </div>
     </div>
 
+    <!--Modify Password Verification Modal-->
+    <div class="modal" id="modify-verify-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">비밀번호 입력</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3" style="width: 450px;">
+                        <label for="basic-url" class="form-label">비밀번호를 입력해주세요</label>
+                        <div class="password-group row g-3">
+                            <div class="col-auto">
+                                <label for="inputPassword6" class="col-form-label">Password</label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="password" id="modipw" class="form-control"
+                                    aria-describedby="passwordHelpInline" maxlength='6'
+                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                      />
+                            </div>
+                            <div class="col-auto">
+                                <span id="passwordHelpInline" class="form-text">
+                                    Must be 6 numbers.
+                                </span>
+                            </div>
+                        </div>
 
+                    </div>
+                </div>
+                <div class="modal-footer" style="display: flex; justify-content: center;">
+                    <button id="modifconfirmbtn" type="button" class="btn btn-primary">수정</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-
-    <!--Write Modal-->
-    <div class="modal" id="WriteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    <!--Modify Modal-->
+    <div class="modal" id="Modify-Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel">
         <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">멤버 등록하기</h1>
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">멤버 수정하기</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -904,11 +958,11 @@
                             <div class="coloum">
                                 <div class="row">
                                     <div class="input-group" style="width: 300px;">
-                                        <input type="text" class="form-control" id="modname" placeholder="Username"
+                                        <input type="text" class="form-control" id="modiname" placeholder="Username"
                                             aria-label="Username" aria-describedby="basic-addon1">
                                     </div>
                                     <div class="input-group" style="width: 300px;">
-                                        <input type="text" class="form-control" id="modmbti" placeholder="MBTI"
+                                        <input type="text" class="form-control" id="modimbti" placeholder="MBTI"
                                             aria-label="MBTI" aria-describedby="basic-addon1">
                                     </div>
                                 </div>
@@ -916,15 +970,16 @@
                             <div style="margin-top: 25px;">
                                 <label class="profile2" for="basic-url" class="form-label">ㆍ생년월일</label>
                                 <div class="writeDateInput col-md-6">
-                                    <input type="date" class="form-control" id="WriteDateInput">
+                                    <input type="date" class="form-control" id="modiDateInput">
                                 </div>
                             </div>
                             <div style="margin-top: 25px;">
                                 <div class="mb-3">
                                     <label for="basic-url" class="form-label">ㆍ취미</label>
                                     <div class="input-group">
-                                        <input type="text" class="form-control" id="modhobby" placeholder="축구, 게임, 산책 등"
-                                            aria-label="축구, 게임, 산책 등" aria-describedby="basic-addon4">
+                                        <input type="text" class="form-control" id="modihobby"
+                                            placeholder="축구, 게임, 산책 등" aria-label="축구, 게임, 산책 등"
+                                            aria-describedby="basic-addon4">
                                     </div>
                                 </div>
                             </div>
@@ -932,7 +987,7 @@
                                 <div class="mb-3">
                                     <label for="basic-url" class="form-label">ㆍ사는 곳</label>
                                     <div class="input-group">
-                                        <input type="text" class="form-control" id="modlive"
+                                        <input type="text" class="form-control" id="modilive"
                                             placeholder="시군구까지 (Ex. 서울 동작, 경기 광주)" aria-label="시군구까지 (Ex. 서울 동작, 경기 광주)"
                                             aria-describedby="basic-addon4">
                                     </div>
@@ -943,44 +998,31 @@
                     <div class="row" style="margin-top: 30px;">
                         <div class="input-group">
                             <span class="inputname input-group-text">나의 장점은</span>
-                            <textarea id="modpoint" class="form-control" aria-label="With textarea" rows="2"></textarea>
+                            <textarea id="modipoint" class="form-control" aria-label="With textarea"
+                                rows="2"></textarea>
                         </div>
                         <div class="input-group" style="margin-top: 30px;">
                             <span class="inputname input-group-text">나의 협업 스타일은</span>
-                            <textarea id="modstyle" class="form-control" aria-label="With textarea" rows="2"></textarea>
+                            <textarea id="modistyle" class="form-control" aria-label="With textarea"
+                                rows="2"></textarea>
                         </div>
                         <div class="input-group" style="margin-top: 30px;">
                             <span class="inputname input-group-text">Github 주소</span>
-                            <textarea id="WriteMyGithub" class="form-control" aria-label="With textarea"
+                            <textarea id="modiGithub" class="form-control" aria-label="With textarea"
                                 rows="1"></textarea>
                         </div>
                         <div class="input-group" style="margin-top: 30px;">
                             <span class="inputname input-group-text">블로그 주소</span>
-                            <textarea id="WriteMyBlog" class="form-control" aria-label="With textarea"
-                                rows="1"></textarea>
+                            <textarea id="modiBlog" class="form-control" aria-label="With textarea" rows="1"></textarea>
                         </div>
                         <div class="input-group" style="margin-top: 30px;">
                             <span class="inputname input-group-text">e-mail</span>
-                            <textarea id="WriteMyEmail" class="form-control" aria-label="With textarea"
+                            <textarea id="modiEmail" class="form-control" aria-label="With textarea"
                                 rows="1"></textarea>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <div class="password-group row g-3">
-                        <div class="col-auto">
-                            <label for="inputPassword6" class="col-form-label">Password</label>
-                        </div>
-                        <div class="col-auto">
-                            <input type="password" id="writepw" class="form-control"
-                                aria-describedby="passwordHelpInline">
-                        </div>
-                        <div class="col-auto">
-                            <span id="passwordHelpInline" class="form-text">
-                                Must be 6 numbers.
-                            </span>
-                        </div>
-                    </div>
                     <button id="modifycancle" type="button" class="btn btn-secondary" data-bs-dismiss="modal"
                         style="margin-left: auto;">취소</button>
                     <button id="modifybtn2" type="button" class="btn btn-primary" disabled>수정</button>
@@ -989,7 +1031,7 @@
         </div>
     </div>
 
-    <!--Write Image URL Input Modal-->
+    <!--Modify Image URL Input Modal-->
     <div class="modal" id="upload-image-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -1011,52 +1053,14 @@
                 <div class="modal-footer" style="display: flex; justify-content: center;">
                     <button type="button" class="btn btn-secondary" data-bs-target="#WriteModal"
                         data-bs-toggle="modal">취소</button>
-                    <button type="button" id="Urlconfirmbtn" class="btn btn-primary" data-bs-target="#WriteModal"
+                    <button type="button" id="Urlconfirmbtn" class="btn btn-primary" data-bs-target="#Modify-Modal"
                         data-bs-toggle="modal" disabled>확인</button>
                 </div>
             </div>
         </div>
     </div>
 
-
-    <!--delete Modal-->
-    <div class="modal" id="modify-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">비밀번호 입력</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="mb-3" style="width: 450px;">
-                        <label for="basic-url" class="form-label">비밀번호를 입력해주세요</label>
-                        <div class="password-group row g-3">
-                            <div class="col-auto">
-                                <label for="inputPassword6" class="col-form-label">Password</label>
-                            </div>
-                            <div class="col-auto">
-                                <input type="password" id="mopw" class="form-control"
-                                    aria-describedby="passwordHelpInline">
-                            </div>
-                            <div class="col-auto">
-                                <span id="passwordHelpInline" class="form-text">
-                                    Must be 6 numbers.
-                                </span>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="modal-footer" style="display: flex; justify-content: center;">
-
-                    <button id="deletebtn" type="button" id="Urlconfirmbtn" class="btn btn-primary">삭제</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!--delete Modal-->
+    <!--Delete Password Verification Modal-->
     <div class="modal" id="delete-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -1072,7 +1076,7 @@
                                 <label for="inputPassword6" class="col-form-label">Password</label>
                             </div>
                             <div class="col-auto">
-                                <input type="password" id="depw" class="form-control"
+                                <input type="password" id="delepw" class="form-control"
                                     aria-describedby="passwordHelpInline">
                             </div>
                             <div class="col-auto">
@@ -1086,13 +1090,11 @@
                 </div>
                 <div class="modal-footer" style="display: flex; justify-content: center;">
 
-                    <button id="deletebtn" type="button" id="Urlconfirmbtn" class="btn btn-primary">삭제</button>
+                    <button id="deletebtn" type="button" class="btn btn-primary">삭제</button>
                 </div>
             </div>
         </div>
     </div>
-
-
 </body>
 
 </html>
