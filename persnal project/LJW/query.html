@@ -284,13 +284,11 @@
             margin: 5% auto 0 auto;
             text-align: center;
             font-size: 4vh;
-            border: 1px solid darkblue;
+
             background-color: dodgerblue;
             width: 100%;
-            height: 50vh;
-            background-image: url("https://postfiles.pstatic.net/MjAyNDA0MTdfMTQg/MDAxNzEzMzU3NTMyMjM5.ffxolDq2cuLY6VChAVmj_xXJ3C7t9y-OjCEYEtG_4OAg.jo9LOWOlvJvkpTnPRlqblBEJ3-SagKg9tzlA5ee7tn8g.JPEG/%EC%A0%9C%EB%AA%A9_%EC%97%86%EC%9D%8C-1.jpg?type=w966");
-            background-position: center;
-            background-size: cover;
+            height: 22vh;
+
 
         }
 
@@ -801,7 +799,6 @@
     <div class="parent">
         <div class="profilecard">
             <div class="thumbnail">
-                <a href="./show.html?date_id=${date2}"></a>
                 <img id="profileimg" src="" class="profileimg" alt="...">
 
             </div>
@@ -882,7 +879,7 @@
 
     <div class="btn2">
         <button type="button" class="btn btn-info writebtn" data-bs-toggle="modal"
-            data-bs-target=#WriteModal>수정</button>
+            data-bs-target=#modify-Modal>수정</button>
         <button type="button" class="btn btn-info writebtn" data-bs-toggle="modal"
             data-bs-target=#delete-modal>삭제</button>
     </div>
@@ -1028,7 +1025,7 @@
 
 
     <!--delete Modal-->
-    <div class="modal" id="delete-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+    <div class="modal" id="modify-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -1043,7 +1040,7 @@
                                 <label for="inputPassword6" class="col-form-label">Password</label>
                             </div>
                             <div class="col-auto">
-                                <input type="password" id="depw" class="form-control"
+                                <input type="password" id="mopw" class="form-control"
                                     aria-describedby="passwordHelpInline">
                             </div>
                             <div class="col-auto">
