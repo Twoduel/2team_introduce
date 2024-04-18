@@ -20,12 +20,14 @@
         }
 
         @import url('https://fonts.googleapis.com/css2?family=Anton&family=Jersey+15&display=swap');
-
-     
-
+        
+        body * {
+            border: 1px solid red
+        }
         header {
             height: 100px;
 
+            background-color: green;
 
             display: flex;
             justify-items: center;
@@ -90,21 +92,6 @@
             text-align: center;
         }
 
-        header {
-            margin: 30px 0px 30px 0px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-
-        .logo {
-            width: 400px;
-            height: 120px;
-
-            cursor: pointer;
-        }
-
         body {
             font-size: 10px;
             width: 60%;
@@ -114,6 +101,9 @@
 
         header {
             height: 100px;
+
+            background-color: green;
+
             display: flex;
             justify-items: center;
             align-items: center;
@@ -245,10 +235,6 @@
             box-shadow: 0 0 0 1px gray inset;
         }
 
-        .card-body {
-            width: 100%;
-        }
-
         #image-container img {
             width: 100%;
             height: 100%;
@@ -285,24 +271,27 @@
         }
 
         .introduce {
-            margin: 2% auto 0 auto;
+            margin: 5% auto 0 auto;
             text-align: center;
             font-size: 4vh;
+            border: 1px solid darkblue;
             background-color: dodgerblue;
             width: 100%;
-            height: 26vh;
-            border-radius: 5px;
+            height: 50vh;
+            background-image: url("https://postfiles.pstatic.net/MjAyNDA0MTdfMTQg/MDAxNzEzMzU3NTMyMjM5.ffxolDq2cuLY6VChAVmj_xXJ3C7t9y-OjCEYEtG_4OAg.jo9LOWOlvJvkpTnPRlqblBEJ3-SagKg9tzlA5ee7tn8g.JPEG/%EC%A0%9C%EB%AA%A9_%EC%97%86%EC%9D%8C-1.jpg?type=w966");
+            background-position: center;
+            background-size: cover;
 
         }
 
         .introducetext {
-            margin-bottom: 40%;
+            margin-bottom: 50%;
             margin-top: 3%;
 
         }
 
         .aboutme {
-            margin: 4% auto 2% auto;
+            margin: 5% auto 5% auto;
             text-align: center;
             font-size: 5vh;
             width: 100%
@@ -310,37 +299,37 @@
 
         .parent {
             width: 100%;
-            height: 40vh;
+            height: 30vh;
+
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
         .profilecard {
-            width: 14.5%;
-            height: 75%;
+            width: 15%;
+            height: 90%;
 
             margin-top: 0%;
             margin-left: 8%;
 
         }
 
+        .profileimg {
+            width: 20vw;
+            height: 26.6vh;
+            margin: 0px auto 0px auto;
+            border-radius: 5px;
+        }
+
         .thumbnail {
             width: 100%;
             border-radius: 5px;
         }
-        .profileimg {
-            width: 100%;
-            height: 26.666666666666666666666vh;
-            margin: 0px auto 0px auto;
-            border-radius: 5px;
-        }
-    
 
         .cardbody1 {
             width: 100%;
-            height: 100%;
-            margin-left: %;
+            margin-left: 0%;
         }
 
         .cardbody2 {
@@ -349,33 +338,28 @@
         }
 
         .card-body2 {
-            width: 100%;
-            height: 20%;
+            width: 90%;
+            height: 10%;
             margin: 0 auto 0 auto;
             text-align: center;
             font-size: 3vh;
-            
+
         }
 
-        .card1 {
-            margin: 0 auto 0 auto;
-            width: 100%vw
+        .cardbody {
+            witdh: 100%
         }
 
         .card2 {
-            margin: 30% auto 0 auto;
-            width: 100%
+            margin-top: 50px;
+
         }
 
-        .card-body {}
-
-
-
         .profile {
-            margin-top: 0%;
-            margin-left: 10%;
+            margin-top: 3%;
+            margin-left: 5%;
             width: 25%;
-            height: 85%;
+            height: 75%;
             display: inline-block;
 
         }
@@ -387,10 +371,10 @@
 
         .card-text {
             width: 100%;
-            height: 5vh;
+            height: 2vh;
             font-size: 3vh;
             text-align: center;
-            margin-top: 10%;
+            margin-top: 5%;
         }
 
         .card-title {
@@ -399,17 +383,17 @@
 
 
         .introduce2 {
-            margin: 5% 20% 10% 0;
+            margin: 5% 20% 10% auto;
             font-size: 5em;
-            margin-left: 0%;
+            margin-left: 3%;
             width: 100%;
-            margin-top: 2vh;
+            margin-top: 12vh;
             font-size: 3vh
         }
 
         .introduce2text {
             margin-left: 5%;
-            font-size: 2.2vw;
+            font-size: 2rem;
         }
 
         .point {
@@ -417,7 +401,7 @@
         }
 
         footer {
-            border-top: 1px solid #5a5656;
+            border-top: 1px solid #e4e4e4;
             background-color: #f8f9fa;
             width: 100%;
             height: 50%;
@@ -426,7 +410,7 @@
 
         .footer-github {
 
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: #545e6f;
             margin-bottom: 0.3rem;
             margin: 0.6rem 0 0 0.6rem;
@@ -434,14 +418,14 @@
         }
 
         .footer-blog {
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: #545e6f;
             margin: 0.6rem;
 
         }
 
         .footer-email {
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: #545e6f;
             margin: 0.6rem;
 
@@ -460,7 +444,6 @@
 
         .introducename {
             color: white;
-            font-size: 3vw;
 
         }
 
@@ -490,11 +473,6 @@
 
         .introduce3icon {
             width: 2.7vw;
-        }
-
-        .name-text {
-            width: 100%;
-            border: 1px solid red;
         }
     </style>
 
@@ -734,44 +712,44 @@
 
         $("#modifybtn2").click(async function () { //수정버튼을 누르면
 
-            let modiname = $('#modiname').val();
-            let modimbti = $('#modimbti').val();
-            let modihobby = $('#modihobby').val();
-            let modilive = $('#modilive').val();
-            let modistyle = $('#modistyle').val();
-            let modipoint = $('#modipoint').val();
-            let modigithub = $('#modiGithub').val();
-            let modiblog = $('#modiBlog').val();
-            let modiemail = $('#modiEmail').val();
-            let modiimage = $('#upload-image-url').val();
-            let modidate = $('#modiDateInput').val();
+                let modiname = $('#modiname').val();
+                let modimbti = $('#modimbti').val();
+                let modihobby = $('#modihobby').val();
+                let modilive = $('#modilive').val();
+                let modistyle = $('#modistyle').val();
+                let modipoint = $('#modipoint').val();
+                let modigithub = $('#modiGithub').val();
+                let modiblog = $('#modiBlog').val();
+                let modiemail = $('#modiEmail').val();
+                let modiimage = $('#upload-image-url').val();
+                let modidate = $('#modiDateInput').val();
 
-            const updateRef = doc(db, "members", id);
+                const updateRef = doc(db, "members", id);
 
-            await updateDoc(updateRef, { // 데이터를 수정하고
-                name: modiname,
-                mbti: modimbti,
-                hobby: modihobby,
-                live: modilive,
-                style: modistyle,
-                point: modipoint,
-                github: modigithub,
-                blog: modiblog,
-                email: modiemail,
-                image: modiimage,
-                date: modidate
+                await updateDoc(updateRef, { // 데이터를 수정하고
+                    name: modiname,
+                    mbti: modimbti,
+                    hobby: modihobby,
+                    live: modilive,
+                    style: modistyle,
+                    point: modipoint,
+                    github: modigithub,
+                    blog: modiblog,
+                    email: modiemail,
+                    image: modiimage,
+                    date: modidate
 
+                });
+                alert('수정 완료'); // 알람을 띄우고
+                window.location.reload(); // 새로고침한다
             });
-            alert('수정 완료'); // 알람을 띄우고
-            window.location.reload(); // 새로고침한다
-        });
 
         $("#deletebtn").click(async function () { //삭제 버튼을 누르면
 
             let delepw = $('#delepw').val();
 
 
-            if (delepw == pw) { // 패스워드가 일치할 때
+            if (depw == pw) { // 패스워드가 일치할 때
                 const minpRef = doc(db, "members", id);
                 await deleteDoc(minpRef);  // 게시물을 삭제하고
                 alert('삭제 완료') // 알람을 띄우고
@@ -818,10 +796,6 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
-    <header>
-        <img class="logo" src="./로고.png" onclick="location.href='../CKS/index.html'">
-    </header>
-
     <div class="introduce">
         <div class=introducetext>
             <p>안&nbsp녕&nbsp하&nbsp세&nbsp요.</p>
@@ -851,13 +825,13 @@
 
         <div class="profile">
             <div class="cardbody1">
-                <div class="card1">
+                <div class="card1" style="width: 15rem;">
                     <div class="card-body">
                         <h5 class="card-title">생년월일</h5>
                         <p id="birth" class="card-text"></p>
                     </div>
                 </div>
-                <div class="card2">
+                <div class="card2" style="width: 15rem;">
                     <div class="card-body">
                         <h5 class="card-title">취미</h5>
                         <p id=hobby class="card-text"></p>
@@ -869,13 +843,13 @@
 
         <div class="profile">
             <div class="cardbody2">
-                <div class="card1">
+                <div class="card1" style="width: 15rem;">
                     <div class="card-body">
                         <h5 class="card-title">MBTI</h5>
                         <p id="mbti" class="card-text"></p>
                     </div>
                 </div>
-                <div class="card2">
+                <div class="card2" style="width: 15rem;">
                     <div class="card-body">
                         <h5 class="card-title">거주지</h5>
                         <p id="live" class="card-text"></p>
@@ -921,7 +895,8 @@
     <div class="btn2">
         <button type="button" class="btn btn-info" data-bs-toggle="modal"
             data-bs-target=#modify-verify-modal>수정</button>
-        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target=#delete-modal>삭제</button>
+        <button type="button" class="btn btn-info" data-bs-toggle="modal"
+            data-bs-target=#Delete-modal>삭제</button>
     </div>
     </div>
 
