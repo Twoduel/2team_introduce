@@ -1096,7 +1096,9 @@
                             </div>
                             <div class="col-auto">
                                 <input type="password" id="delepw" class="form-control"
-                                    aria-describedby="passwordHelpInline">
+                                    aria-describedby="passwordHelpInline" maxlength='6'
+                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                      />
                             </div>
                             <div class="col-auto">
                                 <span id="passwordHelpInline" class="form-text">
