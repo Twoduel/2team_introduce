@@ -21,77 +21,16 @@
 
         @import url('https://fonts.googleapis.com/css2?family=Anton&family=Jersey+15&display=swap');
 
-
-
-        header {
-            height: 100px;
-
-
-            display: flex;
-            justify-items: center;
-            align-items: center;
-        }
-
-        .home {
-            margin-left: 100px;
-        }
-
-        .header_intro {
-            margin-left: auto;
-            margin-right: 100px;
-        }
-
-        .intro_team {
-            height: 100px;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .intro_team {
-            margin-top: 30px;
-            font-size: 120px;
-
-            background-color: skyblue;
-        }
-
-        .write {
-            width: 80px;
-
-            margin-top: 30px;
-            margin-left: auto;
-        }
-
-        .card-group {
-            margin-top: 10px;
-        }
-
-        .card-group .card {
-            flex: 1 0 300px;
-            cursor: pointer;
-        }
-
-        .card-group .card:hover {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .card-img-top {
-            width: 100%;
-            height: 614px;
-            object-fit: cover;
-        }
-
-        .card-title {
-            text-align: center;
-        }
-
-        .card-mbti {
-            text-align: center;
+        body {
+            width: 70%;
+            background-color: rgba(245, 245, 220, 0.2);
+            margin: 0px auto 0px auto;
         }
 
         header {
+            height: 120px;
             margin: 30px 0px 30px 0px;
+
             display: flex;
             justify-content: center;
             align-items: center;
@@ -103,76 +42,6 @@
             height: 120px;
 
             cursor: pointer;
-        }
-
-        body {
-            font-size: 10px;
-            width: 60%;
-
-            margin: 0px auto 0px auto;
-        }
-
-        header {
-            height: 100px;
-            display: flex;
-            justify-items: center;
-            align-items: center;
-        }
-
-        .home {
-            margin-left: 100px;
-        }
-
-        .header_intro {
-            margin-left: auto;
-            margin-right: 100px;
-        }
-
-        .intro_team {
-            height: 100px;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .intro_team {
-            margin-top: 30px;
-            font-size: 120px;
-
-            background-color: skyblue;
-        }
-
-        .write {
-            width: 5vw;
-
-            margin-top: 30px;
-        }
-
-        .Write-Modal-btn {
-            margin-left: auto;
-        }
-
-        .card-group {
-            margin-top: 10px;
-        }
-
-        .card-group .card {
-            flex: 1 0 300px;
-            cursor: pointer;
-        }
-
-        .card-group .card:hover {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-
-        .card-name {
-            text-align: center;
-        }
-
-        .card-mbti {
-            text-align: center;
         }
 
         .modal-fade {
@@ -245,10 +114,6 @@
             box-shadow: 0 0 0 1px gray inset;
         }
 
-        .card-body {
-            width: 100%;
-        }
-
         #image-container img {
             width: 100%;
             height: 100%;
@@ -274,13 +139,7 @@
             align-items: center;
         }
 
-        body {
-            width: 70%;
-            background-color: white;
-            margin: 0px auto 0px auto;
-        }
-
-        .wrap-introduce {
+        .introduce {
             background-color: dodgerblue;
         }
 
@@ -290,15 +149,8 @@
             font-size: 4vh;
             background-color: dodgerblue;
             width: 100%;
-            height: 26vh;
+            height: 22vh;
             border-radius: 5px;
-
-        }
-
-        .introducetext {
-            margin-bottom: 40%;
-            margin-top: 3%;
-
         }
 
         .aboutme {
@@ -308,109 +160,81 @@
             width: 100%
         }
 
-        .parent {
+
+        .big {
             width: 100%;
-            height: 40vh;
+
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        .profilecard {
-            width: 14.5%;
-            height: 75%;
-
-            margin-top: 0%;
-            margin-left: 8%;
-
+        .middle {
+            width: 100%;
+            display: grid;
+            justify-content: center;
+            align-items: center;
         }
 
-        .thumbnail {
-            width: 100%;
-            border-radius: 5px;
+        .middle-row {
+            height: 5vh;
         }
 
         .profileimg {
-            width: 100%;
-            height: 26.666666666666666666666vh;
-            margin: 0px auto 0px auto;
-            border-radius: 5px;
-        }
+            width: 70%;
 
-
-        .cardbody1 {
-            width: 100%;
-            height: 100%;
-            margin-left: %;
-        }
-
-        .cardbody2 {
-            width: 100%;
-            height: 100%;
-        }
-
-        .card-body2 {
-            width: 100%;
-            height: 20%;
             margin: 0 auto 0 auto;
-            text-align: center;
-            font-size: 3vh;
 
-        }
-
-        .card1 {
-            margin: 0 auto 0 auto;
-            width: 100%vw
-        }
-
-        .card2 {
-            margin: 30% auto 0 auto;
-            width: 100%
-        }
-
-        .profile {
-            margin-top: 0%;
-            margin-left: 10%;
-            width: 25%;
-            height: 85%;
-            display: inline-block;
-
+            border: 1px solid gray;
+            border-radius: 10px;
         }
 
         .card-title {
+            text-align: center;
             font-size: 4vh;
             color: deepskyblue;
         }
 
         .card-text {
-            width: 100%;
-            height: 5vh;
             font-size: 3vh;
             text-align: center;
-            margin-top: 10%;
         }
-
-        .card-title {
-            font-size: 3vh;
-        }
-
 
         .introduce2 {
-            margin: 5% 20% 10% 0;
-            font-size: 5em;
-            margin-left: 0%;
-            width: 100%;
-            margin-top: 2vh;
-            font-size: 3vh
+            width: 80%;
+
+            margin: 5% 0 10% 10%;
         }
 
         .introduce2text {
             margin-left: 5%;
             font-size: 2.2vw;
+
+            align-self: center;
         }
 
         .point {
             margin-top: 3%;
+
+            display: flex;
+            justify-content: left;
+            align-items: center;
+        }
+
+        .btn-grou {
+            width: 100%;
+
+            margin: 0 0 10px;
+
+            display: flex;
+            justify-content: right;
+            align-items: center;
+        }
+
+        .btn-grou .btn {
+            width: 100px;
+
+            margin-left: 5px;
         }
 
         footer {
@@ -422,47 +246,33 @@
         }
 
         .footer-github {
+            cursor: pointer;
 
             font-size: 1rem;
             color: #545e6f;
-            margin-bottom: 0.3rem;
-            margin: 0.6rem 0 0 0.6rem;
-
+            margin-top: 0.6rem;
+            margin-bottom: 1rem;
+            margin-left: 0.6rem;
         }
 
         .footer-blog {
             font-size: 1rem;
             color: #545e6f;
-            margin: 0.6rem;
-
+            margin-bottom: 1rem;
+            margin-left: 0.6rem;
         }
 
         .footer-email {
             font-size: 1rem;
             color: #545e6f;
-            margin: 0.6rem;
-
-        }
-
-        .btn2 {
-
-            margin: 5px auto 0px auto;
-
-            text-align: center;
-        }
-
-        .hbbtn {
-            background-color: transparent;
+            margin-bottom: 1rem;
+            margin-left: 0.6rem;
         }
 
         .introducename {
             color: white;
             font-size: 3vw;
 
-        }
-
-        .profileimg {
-            width: 10vw;
         }
 
         .githubicon {
@@ -477,10 +287,6 @@
             width: 2vw;
         }
 
-        .footertext {
-            margin-left: ;
-        }
-
         .introduce2icon {
             width: 3vw;
         }
@@ -492,6 +298,8 @@
         .name-text {
             width: 100%;
 
+            font-size: 3vh;
+            text-align: center;
         }
     </style>
 
@@ -821,7 +629,6 @@
             <p>안&nbsp녕&nbsp하&nbsp세&nbsp요.</p>
             <p>저&nbsp는&nbsp <span class="introducename" id="name"> </span> 입&nbsp니&nbsp다.&nbsp</p>
             <p>저&nbsp를&nbsp 소&nbsp개&nbsp해&nbsp 드&nbsp릴&nbsp게&nbsp요!</p>
-
         </div>
     </div>
 
@@ -830,53 +637,45 @@
         <p>ABOUT ME</p>
     </div>
 
-    <div class="parent">
-        <div class="profilecard">
-            <div class="thumbnail">
-                <a href="./show.html?date_id=${date2}"></a>
-                <img id="profileimg" src="" class="profileimg" alt="...">
-
-            </div>
-            <div class="card-body2">
-                <p id="name-text" class="name-text">이름</p>
-            </div>
+    <div class="big">
+        <div class="middle">
+            <img id="profileimg" src="" class="profileimg" alt="...">
+            <p id="name-text" class="name-text">이름</p>
         </div>
 
-
-        <div class="profile">
-            <div class="cardbody1">
-                <div class="card1">
-                    <div class="card-body">
-                        <h5 class="card-title">생년월일</h5>
-                        <p id="birth" class="card-text"></p>
-                    </div>
+        <div class="middle">
+            <div>
+                <div>
+                    <h5 class="card-title">생년월일</h5>
                 </div>
-                <div class="card2">
-                    <div class="card-body">
-                        <h5 class="card-title">취미</h5>
-                        <p id=hobby class="card-text"></p>
-                    </div>
+                <div>
+                    <p id="birth" class="card-text"></p>
+                </div>
+                <div class="middle-row"></div>
+                <div>
+                    <h5 class="card-title">취미</h5>
+                </div>
+                <div>
+                    <p id=hobby class="card-text"></p>
                 </div>
             </div>
-
         </div>
-
-        <div class="profile">
-            <div class="cardbody2">
-                <div class="card1">
-                    <div class="card-body">
-                        <h5 class="card-title">MBTI</h5>
-                        <p id="mbti" class="card-text"></p>
-                    </div>
+        <div class="middle">
+            <div>
+                <div>
+                    <h5 class="card-title">MBTI</h5>
                 </div>
-                <div class="card2">
-                    <div class="card-body">
-                        <h5 class="card-title">거주지</h5>
-                        <p id="live" class="card-text"></p>
-                    </div>
+                <div>
+                    <p id="mbti" class="card-text"></p>
+                </div>
+                <div class="middle-row"></div>
+                <div>
+                    <h5 class="card-title">거주지</h5>
+                </div>
+                <div>
+                    <p id="live" class="card-text"></p>
                 </div>
             </div>
-
         </div>
     </div>
 
@@ -892,32 +691,32 @@
         </div>
     </div>
 
+    <div class="btn-grou">
+        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target=#modify-verify-modal>수
+            정</button>
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target=#delete-modal>삭 제</button>
+        <button type="button" class="btn btn-dark" onclick="location.href='./member.html'">목 록</button>
+    </div>
+
     <footer>
         <div>
             <div class="inner">
                 <p style="font-size: 1.3rem">contact</p>
-                <div class="footer-github"><img class=githubicon
-                        src="https://cdn-icons-png.flaticon.com/128/733/733609.png" class="" alt="..."> Github : <span
-                        id="github"></span>
-                    <button id="githubcopy">복사</button>
-                </div>
             </div>
-            <div class="footer-blog"><img class=blogicon src="https://cdn-icons-png.flaticon.com/128/49/49334.png"
-                    class="" alt="..."> Blog &nbsp;&nbsp;&nbsp;: <span id="blog"></span>
-                <button id="blogcopy">복사</button>
+            <div class="footer-github" id="githubcopy"><img class=githubicon
+                    src="https://cdn-icons-png.flaticon.com/128/733/733609.png" class="" alt="..."> Github : <span
+                    id="github"></span>
             </div>
-            <div class="footer-email"><img class=emailicon src="https://cdn-icons-png.flaticon.com/128/3178/3178158.png"
-                    class="" alt="..."> E-mail : <span id="email"></span><button id="emailcopy">복사</button>
+            <div class="footer-blog" id="blogcopy" style="cursor: pointer;"><img class=blogicon
+                    src="https://cdn-icons-png.flaticon.com/128/49/49334.png" class="" alt="...">&nbsp;&nbsp;Blog
+                &nbsp;&nbsp;: <span id="blog"></span>
+            </div>
+            <div class="footer-email" id="emailcopy" style="cursor: pointer;"><img class=emailicon
+                    src="https://cdn-icons-png.flaticon.com/128/3178/3178158.png" class="" alt="..."> E-mail : <span
+                    id="email"></span>
             </div>
         </div>
     </footer>
-
-    <div class="btn2">
-        <button type="button" class="btn btn-info" data-bs-toggle="modal"
-            data-bs-target=#modify-verify-modal>수정</button>
-        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target=#delete-modal>삭제</button>
-    </div>
-    </div>
 
     <!--Modify Password Verification Modal-->
     <div class="modal" id="modify-verify-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -964,7 +763,6 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="staticBackdropLabel">멤버 수정하기</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="row sub-modal-body">

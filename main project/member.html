@@ -74,8 +74,18 @@
 
             if (URL !== '') {
                 document.getElementById('Urlconfirmbtn').disabled = false;
-            } else {
+            }else {
                 document.getElementById('Urlconfirmbtn').disabled = true;
+            };
+
+            var upimage = document.getElementById("upload-image-url");
+            upimage.addEventListener("keypress", nopevail, false);
+        }
+
+        function nopevail(event) {
+            var charCode = event.charCode;
+            if (charCode == 32) {
+                event.preventDefault();
             }
         }
 
