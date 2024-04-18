@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인페이지</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Jua&display=swap');
+
+        * {
+            font-family: "Jua", sans-serif;
+        }
+
+        body {
+            background-color: rgba(245, 245, 220, 0.2);
+            width: 70%;
+            margin: 0 auto 0 auto;
+        }
+
+        header {
+            margin: 30px 0 30px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logoimg {
+            width: 400px;
+            height: 120px;
+            cursor: pointer;
+        }
+
+        .container {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            height: auto;
+        }
+
+        .card {
+            position: relative;
+            background-position: right;
+            background-size: contain;
+            background-repeat: no-repeat;
+            padding-right: 200px;
+            overflow: hidden;
+        }
+
+        .card:hover .card-img {
+            right: 0;
+        }
+
+        .card-img {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -450px;
+            transition: right 1s ease-in-out;
+            width: auto;
+            height: 100%;
+        }
+
+        .card1 {
+            background-color: rgba(144, 238, 144, 0.5);
+        }
+
+        .card2 {
+            background-color: rgba(255, 250, 205, 0.5);
+        }
+
+        .card3 {
+            background-color: rgba(240, 128, 128, 0.5);
+        }
+
+        .footer {
+            width: 100%;
+            height: 150px;
+            text-align: center;
+        }
+
+        .sticky-button {
+            margin-bottom: 50px;
+            position: sticky;
+            z-index: 10;
+            width: 600px;
+            height: 50px;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var button = document.querySelector(".sticky-button");
+            button.addEventListener("click", function () {
+                window.location.href = "member.html";
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <img onclick="location.href='main.html'" class="logoimg"
+            src="https://postfiles.pstatic.net/MjAyNDA0MTdfMjcx/MDAxNzEzMzU0MjY5ODU2.9grHpGAr3wWHds1Uq6LFD-anLExZ4GV-rSnpdi4_-Sog.4J8uzR-wvg556txnx_3-BbWNYnNXaVybUzLFKY84DzQg.PNG/%EB%A1%9C%EA%B3%A0%ED%8C%8C%EC%9D%BC_(1).png?type=w966">
+    </header>
+    <div class="container">
+        <div class="card card1 w-50 my-3">
+            <div class="card-body">
+                <div style="font-size: 25px;">
+                    <h5 class="card-title">우리 텐션을 높2조를 소개합니다.
+                        <br>
+                        <br>
+                        <br>우리팀은 P가 4명입니다!
+                        <br>남들이 보았을때 계획이 없어보이지만
+                        <br>계획이 설정된다면 끝을 향해 달려가는힘은
+                        <br>누구보다 못지 않은게 특징입니다!
+                    </h5>
+                </div>
+                <div class="card-img">
+                    <img src="./ENFP (2).png" style="max-width: 100%; max-height: 100%; display: block; margin: auto auto auto 210px;">
+                </div>
+            </div>
+        </div>
+        <div class="card card2 w-50 my-3">
+            <div class="card-body">
+                <div style="font-size: 25px;">
+                    <h5 class="card-title">추구하는 궁극적인 목표
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                    </h5>
+                </div>
+                <div class="card-img">
+                    <img src="./ESTP.png" style="max-width: 100%; max-height: 100%; display: block; margin: auto;">
+                </div>
+            </div>
+        </div>
+        <div class="card card3 w-50 my-3">
+            <div class="card-body">
+                <div style="font-size: 25px;">
+                    <h5 class="card-title">우리팀의 약속
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                    </h5>
+                </div>
+                <div class="card-img">
+                    <img src="./ISTP.png" style="max-width: 100%; max-height: 100%; display: block; margin: auto;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="fixed inset-x-0 bottom-0">
+            <button class="sticky-button w-full bg-blue-500 hover:bg-red-500 text-white font-bold py-2 px-4 rounded">
+                ! 팀원 구경 하러가기 !
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>
