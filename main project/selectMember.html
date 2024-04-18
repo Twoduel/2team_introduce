@@ -33,12 +33,9 @@
 
 
         header {
-            height: 100px;
-
-            background-color: green;
-
+            margin: 30px 0px 30px 0px;
             display: flex;
-            justify-items: center;
+            justify-content: center;
             align-items: center;
         }
 
@@ -107,15 +104,6 @@
             margin: 0px auto 0px auto;
         }
 
-        header {
-            height: 100px;
-
-            background-color: green;
-
-            display: flex;
-            justify-items: center;
-            align-items: center;
-        }
 
         .home {
             margin-left: 100px;
@@ -284,10 +272,10 @@
             margin: 5% auto 0 auto;
             text-align: center;
             font-size: 4vh;
-
+            border-radius: 5px;
             background-color: dodgerblue;
             width: 100%;
-            height: 22vh;
+            height: 23vh;
 
 
         }
@@ -328,8 +316,6 @@
             height: 26.6vh;
             margin: 0px auto 0px auto;
             border-radius: 5px;
-
-
 
         }
 
@@ -482,9 +468,9 @@
             width: 2vw;
         }
 
-        /* .footertext {
+        .footertext {
             margin-left: ;
-        } */
+        }
 
         .introduce2icon {
             width: 3vw;
@@ -492,6 +478,13 @@
 
         .introduce3icon {
             width: 2.7vw;
+        }
+
+        .logo {
+            width: 400px;
+            height: 120px;
+
+            cursor: pointer;
         }
     </style>
     <script type="module">
@@ -780,7 +773,9 @@
 </head>
 
 <body>
-
+    <header>
+        <img class="logo" src="./로고.png" onclick="location.href='../CKS/index.html'">
+    </header>
 
     <div class="introduce">
         <div class=introducetext>
