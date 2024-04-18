@@ -11,10 +11,19 @@
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+        * {
+            font-family: "Jua", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
         header {
             height: 100px;
 
@@ -275,11 +284,19 @@
             border: 1px solid darkblue;
             background-color: dodgerblue;
             width: 100%;
-            height: 100%;
+            height: 500px;
+            background-image: url("https://postfiles.pstatic.net/MjAyNDA0MTdfMTQg/MDAxNzEzMzU3NTMyMjM5.ffxolDq2cuLY6VChAVmj_xXJ3C7t9y-OjCEYEtG_4OAg.jo9LOWOlvJvkpTnPRlqblBEJ3-SagKg9tzlA5ee7tn8g.JPEG/%EC%A0%9C%EB%AA%A9_%EC%97%86%EC%9D%8C-1.jpg?type=w966");
+            background-position: center;
+            background-size: cover;
+        }
+
+        .introducetext {
+            margin-bottom: 50%;
+            margin-top: 10%;
         }
 
         .aboutme {
-            margin: 20% auto 5% auto;
+            margin: 5% auto 5% auto;
             text-align: center;
             font-size: 2.5em;
             border: 1px solid darkblue;
@@ -288,7 +305,7 @@
 
         .parent {
             display: block;
-            width: 100%;
+            width: 125%;
             height: 350px;
             background-color: aqua;
         }
@@ -296,9 +313,9 @@
         .profilecard {
             float: left;
             width: 20%;
-            height: 80%;
+            height: 100%;
             padding: 20px;
-            margin-top: 3%;
+            margin-top: 0%;
             border: 1px solid darkblue
         }
 
@@ -310,14 +327,14 @@
 
         .cardbody1 {
             width: 100%;
-            margin-left: 30%;
+            margin-left: 0%;
             border: 1px solid darkblue;
         }
 
         .cardbody2 {
             width: 100%;
             height: 100%;
-            margin-left: 30%;
+            margin-left: 0%;
             border: 1px solid darkblue;
         }
 
@@ -334,9 +351,9 @@
         }
 
         .profile {
-            margin-top: 5%;
+            margin-top: 3%;
             margin-left: 5%;
-            width: 30%;
+            width: 25%;
             height: 75%;
             display: inline-block;
             border: 1px solid darkblue
@@ -419,13 +436,13 @@
 
         // For Firebase JS SDK v7.20.0 and later, measurementId is optional
         const firebaseConfig = {
-            apiKey: "AIzaSyDb9vFmI6vwLBKZbx9cWlwMcI02pb3MWf0",
-            authDomain: "sparta-b0b67.firebaseapp.com",
-            projectId: "sparta-b0b67",
-            storageBucket: "sparta-b0b67.appspot.com",
-            messagingSenderId: "501371819843",
-            appId: "1:501371819843:web:c11ccc2f2adff6418cc1f6",
-            measurementId: "G-M7TB311L0N"
+            apiKey: "AIzaSyD8o_HmYXbypNnolN-7F240_-IHn8dnKCg",
+            authDomain: "team-introduce-8dc6f.firebaseapp.com",
+            projectId: "team-introduce-8dc6f",
+            storageBucket: "team-introduce-8dc6f.appspot.com",
+            messagingSenderId: "1079285345183",
+            appId: "1:1079285345183:web:86fdfdf2a4f6a72e506baa",
+            measurementId: "G-7M4ME2J2FP"
         };
 
         // Firebase 인스턴스 초기화
@@ -516,6 +533,7 @@
             });
         });
 
+        // 업로드 이미지 주소 공백 검사, 공백 없을 시 확인버튼 활성화
         function checkEmptyURL() {
             let URL = $('#upload-image-url').val().trim();
 
@@ -526,7 +544,10 @@
             }
         }
 
+        // 업로드 이미지 주소값 추적
         document.getElementById('upload-image-url').addEventListener('input', checkEmptyURL);
+
+
 
         $("#modifybtn2").click(async function () { //수정버튼을 누르면
 
@@ -570,6 +591,26 @@
             }
 
         });
+
+        $("#modifycancle").click(function () {
+            if (window.confirm("작성을 취소하시겠습니까?")) {
+                var imgPreview = document.getElementById('image-container');
+                imgPreview.innerHTML = '';
+                $('#upload-image-url').val('');
+                $('#WriteNameInput').val('');
+                $('#WriteMBTIInput').val('');
+                $('#WriteDateInput').val('');
+                $('#WriteHobbyInput').val('');
+                $('#WriteLiveInput').val('');
+                $('#WriteMyPoint').val('');
+                $('#WriteMyStyle').val('');
+                $('#WriteMyGithub').val('');
+                $('#WriteMyBlog').val('');
+                $('#WriteMyEmail').val('');
+                $('#PasswordInput').val('');
+                alert("취소되었습니다.");
+            }
+        })
 
         $("#deletebtn").click(async function () { //삭제 버튼을 누르면
 
@@ -618,8 +659,14 @@
         </div>
     </nav>
     <div class="introduce">
-        <p>안녕하세요.</p>
-        <p>저는 <span id="name"> </span> 입니다.</p>
+        <div class=introducetext>
+            <p>안녕하세요.</p>
+            <p>저는 <span id="name"> </span> 입니다.</p>
+            <p>저를 소개해 드릴게요</p>
+
+        </div>
+
+
 
     </div>
 
@@ -723,8 +770,8 @@
                 <div class="modal-body">
                     <div class="row sub-modal-body">
                         <div class="d-flex align-content-center flex-wrap upload-image-group">
-                            <div class="writeimg col-md-4" id="profileimg">3x4사이즈</div>
-                            <input type="text" id="modimage" accept="image/*" style="display: none;">
+                            <div class="writeimg col-md-4" id="image-container" style="font-size: 20px; color: gray;">사진
+                            </div>
                             <button class="btn btn-light" data-bs-target="#upload-image-modal"
                                 data-bs-toggle="modal">업로드</button>
                         </div>
@@ -809,7 +856,7 @@
                             </span>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                    <button id="modifycancle" type="button" class="btn btn-secondary" data-bs-dismiss="modal"
                         style="margin-left: auto;">취소</button>
                     <button id="modifybtn2" type="button" class="btn btn-primary" disabled>수정</button>
                 </div>
@@ -817,6 +864,34 @@
         </div>
     </div>
 
+    <!--Write Image URL Input Modal-->
+    <div class="modal" id="upload-image-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">이미지 주소 입력</h5>
+                    <button type="button" id="writemodalclosebtn" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3" style="width: 450px;">
+                        <label for="basic-url" class="form-label">이미지 주소를 입력해주세요</label>
+                        <div class="input-group" style="width: 450px;">
+                            <input type="text" class="form-control" id="upload-image-url"
+                                aria-describedby="basic-addon3 basic-addon4">
+                        </div>
+                        <div class="form-text" id="basic-addon4">3x4비율의 사진이 가장 이쁩니다</div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="display: flex; justify-content: center;">
+                    <button type="button" class="btn btn-secondary" data-bs-target="#WriteModal"
+                        data-bs-toggle="modal">취소</button>
+                    <button type="button" id="Urlconfirmbtn" class="btn btn-primary" data-bs-target="#WriteModal"
+                        data-bs-toggle="modal" disabled>확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--delete Modal-->
     <div class="modal" id="delete-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
