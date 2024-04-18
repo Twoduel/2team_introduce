@@ -28,6 +28,10 @@
             font-style: normal;
         }
 
+        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Jersey+15&display=swap');
+
+
+
         header {
             height: 100px;
 
@@ -287,7 +291,7 @@
             background-image: url("https://postfiles.pstatic.net/MjAyNDA0MTdfMTQg/MDAxNzEzMzU3NTMyMjM5.ffxolDq2cuLY6VChAVmj_xXJ3C7t9y-OjCEYEtG_4OAg.jo9LOWOlvJvkpTnPRlqblBEJ3-SagKg9tzlA5ee7tn8g.JPEG/%EC%A0%9C%EB%AA%A9_%EC%97%86%EC%9D%8C-1.jpg?type=w966");
             background-position: center;
             background-size: cover;
-           
+
         }
 
         .introducetext {
@@ -305,26 +309,27 @@
 
         .parent {
             display: block;
-            width: 125%;
+            width: 100%;
             height: 30vh;
-           
+
         }
 
         .profilecard {
             float: left;
             width: 15%;
             height: 100%;
-            
+
             margin-top: 2%;
             margin-left: 8%;
 
         }
 
         .profileimg {
-            
+
             width: 20vw;
             height: 26.6vh;
             margin: 0px auto 0px auto;
+            border-radius: 5px;
 
 
 
@@ -332,20 +337,20 @@
 
         .thumbnail {
             width: 100%;
-            height: h;
+            border-radius: 5px;
 
         }
 
         .cardbody1 {
             width: 100%;
-            margin-left: 10%;
+            margin-left: 50%;
 
         }
 
         .cardbody2 {
             width: 100%;
             height: 100%;
-            margin-left: 0%;
+            margin-left: 50%;
 
         }
 
@@ -354,7 +359,7 @@
             height: 10%;
             text-align: center;
             font-size: 3vh;
-            
+
         }
 
         .cardbody {
@@ -376,14 +381,14 @@
         }
 
         .card-title {
-            font-size: 0.5rem;
+            font-size: 4vh;
             color: deepskyblue;
         }
 
         .card-text {
             width: 100%;
             height: 2vh;
-            font-size: 2vh;
+            font-size: 3vh;
             text-align: center;
             margin-top: 5%;
         }
@@ -395,16 +400,16 @@
 
         .introduce2 {
             margin: 5% 20% 10% auto;
-            font-size: 2em;
-            margin-left : 5%;
+            font-size: 5em;
+            margin-left: 3%;
             width: 100%;
-            margin-top: 10vh;
+            margin-top: 12vh;
             font-size: 3vh
-
         }
 
         .introduce2text {
             margin-left: 5%;
+            font-size: 2rem;
         }
 
         .point {
@@ -445,7 +450,7 @@
         .btn2 {
 
             margin: 5px auto 0px auto;
-            border: 1px solid darkblue;
+
             text-align: center;
         }
 
@@ -465,6 +470,30 @@
 
         .profileimg {
             width: 10vw;
+        }
+
+        .githubicon {
+            width: 2vw;
+        }
+
+        .blogicon {
+            width: 2vw;
+        }
+
+        .emailicon {
+            width: 2vw;
+        }
+
+        .footertext {
+            margin-left: ;
+        }
+
+        .introduce2icon {
+            width: 3vw;
+        }
+
+        .introduce3icon {
+            width: 2.7vw;
         }
     </style>
     <script type="module">
@@ -595,17 +624,30 @@
 
 
         // 등록하기 Input 공백 검사, 공백 없을 시 확인버튼 활성화
+
         function checkEmpty() {
             // input 필드의 값을 가져옴
-            let modname1 = $('#modname').val().trim()
+            let modname = $('#modname').val().trim()
+                let modmbti = $('#modmbti').val().trim()
+                let modhobby = $('#modhobby').val().trim()
+                let modlive = $('#modlive').val().trim()
+                let modstyle = $('#modstyle').val().trim()
+                let modpoint = $('#modpoint').val().trim()
+                let mgithub = $('#WriteMyGithub').val().trim()
+                let mblog = $('#WriteMyBlog').val().trim()
+                let memail = $('#WriteMyEmail').val().trim()
+                let mimage = $('#upload-image-url').val().trim()
+                let mdate = $('#WriteDateInput').val().trim()
+                let depw = $('#writepw').val().trim()
 
-
-            if (modname !== '') {
+            if (modimage !== '' && modname !== '' && modmbti !== 0 && moddate !== '' && modhobby !== '' && modlive !== '' && modpoint !== '' && modstyle !== '' && modgithub !== '' && modblog !== '' && modemail !== '' && depw !== '') {
                 document.getElementById('modifybtn2').disabled = false;
             } else {
                 document.getElementById('modifybtn2').disabled = true;
             }
         }
+
+
 
 
 
@@ -692,45 +734,59 @@
         }
         )
 
+        $("#githubcopy").click(async function () {
+
+            let nowUrl = github
+
+            navigator.clipboard.writeText(nowUrl).then(res => {
+                alert("주소가 복사되었습니다!");
+            })
+
+        }
+        )
+        $("#blogcopy").click(async function () {
+
+            let nowUrl = blog
+
+            navigator.clipboard.writeText(nowUrl).then(res => {
+                alert("주소가 복사되었습니다!");
+            })
+
+        }
+        )
+        $("#emailcopy").click(async function () {
+
+            let nowUrl = email
+
+            navigator.clipboard.writeText(nowUrl).then(res => {
+                alert("주소가 복사되었습니다!");
+            })
+
+        }
+        )
+
+
+
+
     </script>
 
 </head>
 
 <body>
-    <header>
-        <h1 class="home" id="home">텐션을 높2조</h1>
-        <h1 class="header_intro" id="header_intro">소개합니다</h1>
-        <a class="menu-trigger" href="#">
-            <span></span>
-            <span></span>
-            <span></span>
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Dropdown button
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-            </div>
-        </a>
 
-    </header>
 
     <div class="introduce">
         <div class=introducetext>
-            <p>안녕하세요.</p>
-            <p>저는 <span class="introducename" id="name"> </span> 입니다.</p>
-            <p>저를 소개해 드릴게요</p>
+            <p>안&nbsp녕&nbsp하&nbsp세&nbsp요.</p>
+            <p>저&nbsp는&nbsp <span class="introducename" id="name"> </span> 입&nbsp니&nbsp다.&nbsp</p>
+            <p>저&nbsp를&nbsp 소&nbsp개&nbsp해&nbsp 드&nbsp릴&nbsp게&nbsp요!</p>
 
         </div>
     </div>
 
 
     <div class="aboutme">
-        <p>about me</p>
+        <p>ABOUT ME</p>
     </div>
 
     <div class="parent">
@@ -785,9 +841,12 @@
 
     <div class="introduce2">
         <div class="point">
+            <img class="introduce3icon" src="https://cdn-icons-png.flaticon.com/128/456/456257.png" class="" alt="...">
             <p class="introduce2text">저의 장점은 <span id="point"></span></p>
         </div>
         <div class="point">
+            <img class="introduce2icon" src="https://cdn-icons-png.freepik.com/256/2618/2618576.png?semt=sph" class=""
+                alt="...">
             <p class="introduce2text">저의 협업 스타일은 <span id="style"></span></p>
         </div>
     </div>
@@ -796,19 +855,28 @@
         <footer>
             <div class="inner">
                 <p style="font-size: 1.3rem">contact</p>
-                <div class="footer-github">github : <span id="github"></span></div>
-                <div class="footer-blog">Blog &nbsp;&nbsp;&nbsp;: <span id="blog"></span></div>
-                <div class="footer-email">E-mail : <span id="email"></span></div>
+                <div class="footer-github"><img class=githubicon
+                        src="https://cdn-icons-png.flaticon.com/128/733/733609.png" class="" alt="..."> Github : <span
+                        id="github"></span>
+                    <button id="githubcopy">복사</button>
+                </div>
             </div>
+            <div class="footer-blog"><img class=blogicon src="https://cdn-icons-png.flaticon.com/128/49/49334.png"
+                    class="" alt="..."> Blog &nbsp;&nbsp;&nbsp;: <span id="blog"></span><button
+                    id="blogcopy">복사</button></div>
+            <div class="footer-email"><img class=emailicon src="https://cdn-icons-png.flaticon.com/128/3178/3178158.png"
+                    class="" alt="..."> E-mail : <span id="email"></span><button id="emailcopy">복사</button>
+            </div>
+    </div>
 
-        </footer>
+    </footer>
 
-        <div class="btn2">
-            <button type="button" class="btn btn-info writebtn" data-bs-toggle="modal"
-                data-bs-target=#WriteModal>수정</button>
-            <button type="button" class="btn btn-info writebtn" data-bs-toggle="modal"
-                data-bs-target=#delete-modal>삭제</button>
-        </div>
+    <div class="btn2">
+        <button type="button" class="btn btn-info writebtn" data-bs-toggle="modal"
+            data-bs-target=#WriteModal>수정</button>
+        <button type="button" class="btn btn-info writebtn" data-bs-toggle="modal"
+            data-bs-target=#delete-modal>삭제</button>
+    </div>
     </div>
 
 
@@ -948,6 +1016,44 @@
             </div>
         </div>
     </div>
+
+
+     <!--delete Modal-->
+    <div class="modal" id="delete-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">비밀번호 입력</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3" style="width: 450px;">
+                        <label for="basic-url" class="form-label">비밀번호를 입력해주세요</label>
+                        <div class="password-group row g-3">
+                            <div class="col-auto">
+                                <label for="inputPassword6" class="col-form-label">Password</label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="password" id="depw" class="form-control"
+                                    aria-describedby="passwordHelpInline">
+                            </div>
+                            <div class="col-auto">
+                                <span id="passwordHelpInline" class="form-text">
+                                    Must be 6 numbers.
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer" style="display: flex; justify-content: center;">
+
+                    <button id="deletebtn" type="button" id="Urlconfirmbtn" class="btn btn-primary">삭제</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!--delete Modal-->
     <div class="modal" id="delete-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
