@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -17,7 +18,6 @@
             background-color: rgba(245, 245, 220, 0.2);
             width: 70%;
             margin: 0 auto 0 auto;
-
         }
 
         header {
@@ -26,14 +26,11 @@
             justify-content: center;
             align-items: center;
         }
+
         .logoimg {
             width: 400px;
             height: 120px;
             cursor: pointer;
-        }
-
-        .headercolor {
-            background-color: #4c92b1;
         }
 
         .container {
@@ -43,39 +40,47 @@
             height: auto;
         }
 
-        .leftddabong {
-            height: 100px;
-            width: 100px;
-        }
-
         .card {
+            position: relative;
             background-position: right;
             background-size: contain;
             background-repeat: no-repeat;
+            padding-right: 200px;
+            overflow: hidden;
+        }
+
+        .card:hover .card-img {
+            right: 0;
+        }
+
+        .card-img {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -450px;
+            transition: right 1s ease-in-out;
+            width: auto;
+            height: 100%;
         }
 
         .card1 {
             background-color: rgba(144, 238, 144, 0.5);
-            background-image: url('https://postfiles.pstatic.net/MjAyNDA0MTZfMjY3/MDAxNzEzMjU3NjcyNTE0.wqzVkXydOoFcfXNrdSEuBu8nLxrijs91igVcwxs7XA8g.VrG6zYF8-GN-WJQuNACM112mSNh3fNFQ-pP0qKo4rfkg.PNG/enfp-removebg-preview.png?type=w966');
         }
 
         .card2 {
             background-color: rgba(255, 250, 205, 0.5);
-            background-image: url('https://postfiles.pstatic.net/MjAyNDA0MTZfNTkg/MDAxNzEzMjU3Njc4MDQ5.mIEDX1mwUtBDwB6zWdquIVrjDYOMviE3fjQedx9KTZQg.3--Dw9s50HGkg91aUW11xPByaygoE_lImxMD_sldfd0g.PNG/estp-removebg-preview.png?type=w966');
         }
 
         .card3 {
-            margin-bottom: 150px;
             background-color: rgba(240, 128, 128, 0.5);
-            background-image: url('https://postfiles.pstatic.net/MjAyNDA0MTZfMjY2/MDAxNzEzMjU3NjgzMzY4.VVmq3FfRCpEWPLldzcLseDcI5P9OF6_oqJc1lqlha54g.eOMVMKo6M1w8R0VOKI6OqAiQ6-FBydJiovkrKChUG6Ug.PNG/isfp-removebg-preview.png?type=w966');
         }
 
         .footer {
             width: 100%;
-            height: 150px; 
+            height: 150px;
             text-align: center;
         }
-        
+
         .sticky-button {
             margin-bottom: 50px;
             position: sticky;
@@ -93,76 +98,72 @@
         });
     </script>
 </head>
+
 <body>
     <header>
-        <img  onclick="location.href='./index.html'" class="logoimg" src="https://postfiles.pstatic.net/MjAyNDA0MTdfMjcx/MDAxNzEzMzU0MjY5ODU2.9grHpGAr3wWHds1Uq6LFD-anLExZ4GV-rSnpdi4_-Sog.4J8uzR-wvg556txnx_3-BbWNYnNXaVybUzLFKY84DzQg.PNG/%EB%A1%9C%EA%B3%A0%ED%8C%8C%EC%9D%BC_(1).png?type=w966">      
+        <img onclick="location.href='./index.html'" class="logoimg"
+            src="https://postfiles.pstatic.net/MjAyNDA0MTdfMjcx/MDAxNzEzMzU0MjY5ODU2.9grHpGAr3wWHds1Uq6LFD-anLExZ4GV-rSnpdi4_-Sog.4J8uzR-wvg556txnx_3-BbWNYnNXaVybUzLFKY84DzQg.PNG/%EB%A1%9C%EA%B3%A0%ED%8C%8C%EC%9D%BC_(1).png?type=w966">
     </header>
-        <div class="container">
-            <div class="card1 card w-50 my-3">
-                <div class="card-body">
-                    <div style="font-size: 25px;">
-                        <h5 class="card-title">우리 텐션을 높2조를 소개합니다.
-                            <br>
-                            <br>
-                            <br>우리팀은 P가 4명입니다!
-                            <br>남들이 보았을때 계획이 없어보이지만
-                            <br>계획이 설정된다면 끝을 향해 달려가는힘은
-                            <br>누구보다 못지 않은게 특징입니다!
-                        </h5>
-                    </div>
+    <div class="container">
+        <div class="card card1 w-50 my-3">
+            <div class="card-body">
+                <div style="font-size: 25px;">
+                    <h5 class="card-title">우리 텐션을 높2조를 소개합니다.
+                        <br>
+                        <br>
+                        <br>우리팀은 P가 4명입니다!
+                        <br>남들이 보았을때 계획이 없어보이지만
+                        <br>계획이 설정된다면 끝을 향해 달려가는힘은
+                        <br>누구보다 못지 않은게 특징입니다!
+                    </h5>
+                </div>
+                <div class="card-img">
+                    <img src="./ENFP (2).png" style="max-width: 100%; max-height: 100%; display: block; margin: auto;">
                 </div>
             </div>
-            <div class="card2 card w-50 my-3">
-                <div class="card-body">
-                    <div style="font-size: 25px;">
-                        <h5 class="card-title">추구하는 궁극적인 목표
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                        </h5>
-                    </div>
+        </div>
+        <div class="card card2 w-50 my-3">
+            <div class="card-body">
+                <div style="font-size: 25px;">
+                    <h5 class="card-title">추구하는 궁극적인 목표
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                    </h5>
+                </div>
+                <div class="card-img">
+                    <img src="./ESTP.png" style="max-width: 100%; max-height: 100%; display: block; margin: auto;">
                 </div>
             </div>
-            <div class="card3 card w-50 my-3">
-                <div class="card-body">
-                    <div style="font-size: 25px;">
-                        <h5 class="card-title">우리팀의 약속
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                        </h5>
-                    </div>
+        </div>
+        <div class="card card3 w-50 my-3">
+            <div class="card-body">
+                <div style="font-size: 25px;">
+                    <h5 class="card-title">우리팀의 약속
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                    </h5>
                 </div>
-            </div>
-            <div class="card3 card w-50 my-3" style="margin-bottom: 150px;">
-                <div class="card-body">
-                    <div style="font-size: 25px;">
-                        <h5 class="card-title">우리팀의 약속
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                        </h5>
-                    </div>
+                <div class="card-img">
+                    <img src="./ISTP.png" style="max-width: 100%; max-height: 100%; display: block; margin: auto;">
                 </div>
             </div>
         </div>
     </div>
     <div class="footer">
         <div class="fixed inset-x-0 bottom-0">
-            <button
-                class="sticky-button w-full bg-blue-500 hover:bg-red-500 text-white font-bold py-2 px-4 rounded">
+            <button class="sticky-button w-full bg-blue-500 hover:bg-red-500 text-white font-bold py-2 px-4 rounded">
                 ! 팀원 구경 하러가기 !
             </button>
         </div>
     </div>
 </body>
+
 </html>

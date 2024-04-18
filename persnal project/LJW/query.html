@@ -15,6 +15,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+
+   
+
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 
@@ -156,12 +160,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        .card-img-top {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-        }
-
+       
         .card-name {
             text-align: center;
         }
@@ -267,7 +266,7 @@
 
         body {
             width: 60%;
-            background-color: darkgray;
+            background-color: white;
             margin: 0px auto 0px auto;
         }
 
@@ -280,11 +279,11 @@
         .introduce {
             margin: 5% auto 0 auto;
             text-align: center;
-            font-size: 2em;
+            font-size: 4vh;
             border: 1px solid darkblue;
             background-color: dodgerblue;
             width: 100%;
-            height: 500px;
+            height: 50vh;
             background-image: url("https://postfiles.pstatic.net/MjAyNDA0MTdfMTQg/MDAxNzEzMzU3NTMyMjM5.ffxolDq2cuLY6VChAVmj_xXJ3C7t9y-OjCEYEtG_4OAg.jo9LOWOlvJvkpTnPRlqblBEJ3-SagKg9tzlA5ee7tn8g.JPEG/%EC%A0%9C%EB%AA%A9_%EC%97%86%EC%9D%8C-1.jpg?type=w966");
             background-position: center;
             background-size: cover;
@@ -292,21 +291,22 @@
 
         .introducetext {
             margin-bottom: 50%;
-            margin-top: 10%;
+            margin-top: 3%;
+           
         }
 
         .aboutme {
             margin: 5% auto 5% auto;
             text-align: center;
             font-size: 2.5em;
-            border: 1px solid darkblue;
+           
             width: 100%
         }
 
         .parent {
             display: block;
             width: 125%;
-            height: 350px;
+            height: 30vh;
             background-color: aqua;
         }
 
@@ -314,40 +314,52 @@
             float: left;
             width: 20%;
             height: 100%;
-            padding: 20px;
+           
             margin-top: 0%;
-            border: 1px solid darkblue
+            
+        }
+
+        .profileimg {
+          border: 1px solid black;
+            height:20vh;
+
+
         }
 
         .thumbnail {
             width: 100%;
-            height: 90%;
-            border: 1px solid darkblue;
+            height: h;
+            
         }
 
         .cardbody1 {
             width: 100%;
             margin-left: 0%;
-            border: 1px solid darkblue;
+            
         }
 
         .cardbody2 {
             width: 100%;
             height: 100%;
             margin-left: 0%;
-            border: 1px solid darkblue;
+           
         }
 
         .card-body2 {
             width: 100%;
-            height: 0%;
+            height: 10%;
             text-align: center;
             font-size: 2em;
+            border: 1px solid black;
+        }
+
+        .cardbody {
+            witdh: 100%
         }
 
         .card2 {
             margin-top: 50px;
-            border: 1px solid darkblue
+           
         }
 
         .profile {
@@ -356,13 +368,18 @@
             width: 25%;
             height: 75%;
             display: inline-block;
-            border: 1px solid darkblue
+            
+        }
+
+        .card-title {
+           
+            font-size: 0.5rem;
         }
 
         .card-text {
             width: 100%;
-            height: 20px;
-            border: 1px solid darkblue;
+            height: 2vh;
+          
             font-size: 1rem;
         }
 
@@ -374,7 +391,7 @@
         .introduce2 {
             margin: 5% 20% 10% auto;
             font-size: 2em;
-            border: 1px solid darkblue;
+           
             width: 100%;
 
         }
@@ -392,7 +409,7 @@
             background-color: #f8f9fa;
             width: 100%;
             height: 50%;
-            border: 1px solid darkblue;
+           
         }
 
         .footer-github {
@@ -401,29 +418,49 @@
             color: #545e6f;
             margin-bottom: 0.3rem;
             margin: 0.6rem 0 0 0.6rem;
-            border: 1px solid darkblue;
+          
         }
 
         .footer-blog {
             font-size: 0.9rem;
             color: #545e6f;
             margin: 0.6rem;
-            border: 1px solid darkblue
+            
         }
 
         .footer-email {
             font-size: 0.9rem;
             color: #545e6f;
             margin: 0.6rem;
-            border: 1px solid darkblue
+         
         }
 
         .btn2 {
-            display: inline-block;
+          
             margin: 5px auto 0px auto;
             border: 1px solid darkblue;
             text-align: center;
         }
+
+        .hbbtn {
+            background-color: transparent;
+        }
+
+        .btn btn-info writebtn  {
+            display: inline-block;
+
+        }
+
+        .introducename{
+            color: white;
+            
+        }
+        .profileimg {
+            width: 10vw;
+        }
+
+     
+       
     </style>
     <script type="module">
         // Firebase SDK 라이브러리 가져오기
@@ -448,6 +485,49 @@
         // Firebase 인스턴스 초기화
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
+
+        // Write용 modal 선언
+        const WriteModal = new bootstrap.Modal(document.getElementById('WriteModal'));
+
+        // Write 이미지 주소 입력용 modal 선언
+        const UploadImageModal = new bootstrap.Modal(document.getElementById('upload-image-modal'));
+
+        // Writh용 모달 이미지 업로드 및 미리보기
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('upload-image-url').addEventListener('input', function () {
+                var url = this.value.trim(); // 입력된 주소를 가져옴
+                var imgPreview = document.getElementById('image-container'); // 이미지를 표시할 요소
+                if (url !== '') { // 주소가 비어 있지 않은 경우
+                    var img = new Image(); // 이미지 객체 생성
+                    img.onload = function () { // 이미지가 로드되면 실행되는 함수
+                        imgPreview.innerHTML = ''; // 이미지 컨테이너 초기화
+                        imgPreview.appendChild(img); // 이미지 추가
+                    };
+                    img.onerror = function () { // 이미지 로드 중 오류가 발생한 경우
+                        imgPreview.innerHTML = ''; // 이미지 컨테이너 초기화
+                        alert('이미지를 불러올 수 없습니다.');
+                    };
+                    img.src = url; // 이미지 주소 설정
+                } else {
+                    imgPreview.innerHTML = ''; // 이미지 컨테이너 초기화
+                }
+            });
+        });
+
+        // 업로드 이미지 주소 공백 검사, 공백 없을 시 확인버튼 활성화
+        function checkEmptyURL() {
+            let URL = $('#upload-image-url').val().trim();
+
+            if (URL !== '') {
+                document.getElementById('Urlconfirmbtn').disabled = false;
+            } else {
+                document.getElementById('Urlconfirmbtn').disabled = true;
+            }
+        }
+
+        // 업로드 이미지 주소값 추적
+        document.getElementById('upload-image-url').addEventListener('input', checkEmptyURL);
+
 
         //데이터 선언
         let name;
@@ -508,44 +588,20 @@
 
 
 
-        // Write용 modal 선언
-        const WriteModal = new bootstrap.Modal(document.getElementById('WriteModal'));
 
-        // Writh용 모달 이미지 업로드 및 미리보기
-        document.addEventListener('DOMContentLoaded', function () {
-            document.getElementById('upload-image-url').addEventListener('input', function () {
-                var url = this.value.trim(); // 입력된 주소를 가져옴
-                var imgPreview = document.getElementById('profileimg'); // 이미지를 표시할 요소
-                if (url !== '') { // 주소가 비어 있지 않은 경우
-                    var img = new Image(); // 이미지 객체 생성
-                    img.onload = function () { // 이미지가 로드되면 실행되는 함수
-                        imgPreview.innerHTML = ''; // 이미지 컨테이너 초기화
-                        imgPreview.appendChild(img); // 이미지 추가
-                    };
-                    img.onerror = function () { // 이미지 로드 중 오류가 발생한 경우
-                        imgPreview.innerHTML = ''; // 이미지 컨테이너 초기화
-                        alert('이미지를 불러올 수 없습니다.');
-                    };
-                    img.src = url; // 이미지 주소 설정
-                } else {
-                    imgPreview.innerHTML = ''; // 이미지 컨테이너 초기화
-                }
-            });
-        });
+        // 등록하기 Input 공백 검사, 공백 없을 시 확인버튼 활성화
+        function checkEmpty() {
+            // input 필드의 값을 가져옴
+            let modname1 = $('#modname').val().trim()
 
-        // 업로드 이미지 주소 공백 검사, 공백 없을 시 확인버튼 활성화
-        function checkEmptyURL() {
-            let URL = $('#upload-image-url').val().trim();
 
-            if (URL !== '') {
-                document.getElementById('Urlconfirmbtn').disabled = false;
+            if (modname !== '') {
+                document.getElementById('modifybtn2').disabled = false;
             } else {
-                document.getElementById('Urlconfirmbtn').disabled = true;
+                document.getElementById('modifybtn2').disabled = true;
             }
         }
 
-        // 업로드 이미지 주소값 추적
-        document.getElementById('upload-image-url').addEventListener('input', checkEmptyURL);
 
 
 
@@ -592,6 +648,8 @@
 
         });
 
+
+
         $("#modifycancle").click(function () {
             if (window.confirm("작성을 취소하시겠습니까?")) {
                 var imgPreview = document.getElementById('image-container');
@@ -628,50 +686,41 @@
 
         }
         )
+
     </script>
 
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                    </li>
+    <header>
+        <h1 class="home" id="home">텐션을 높2조</h1>
+        <h1 class="header_intro" id="header_intro">소개합니다</h1>
+        <a class="menu-trigger" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown button
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
-            </div>
-        </div>
-    </nav>
+              </div>
+        </a>
+
+    </header>
+
     <div class="introduce">
         <div class=introducetext>
             <p>안녕하세요.</p>
-            <p>저는 <span id="name"> </span> 입니다.</p>
+            <p>저는 <span class="introducename" id="name"> </span> 입니다.</p>
             <p>저를 소개해 드릴게요</p>
 
         </div>
-
-
-
     </div>
-
-
-
 
 
     <div class="aboutme">
@@ -682,11 +731,11 @@
         <div class="profilecard">
             <div class="thumbnail">
                 <a href="./show.html?date_id=${date2}"></a>
-                <img id="profileimg" src="" class="img-fluid" alt="...">
+                <img id="profileimg" src="" class="profileimg" alt="...">
 
             </div>
             <div class="card-body2">
-                <p class="name-text">이름</p>
+                <p id="name-text" class="name-text">이름</p>
             </div>
         </div>
 
@@ -730,16 +779,17 @@
 
     <div class="introduce2">
         <div class="point">
-            <p class="introduce2text">저의 장점은 <span id="point"></span> 입니다</p>
+            <p class="introduce2text">저의 장점은 <span id="point"></span></p>
         </div>
         <div class="point">
-            <p class="introduce2text">저의 협업 스타일은 <span id="style"></span> 입니다</p>
+            <p class="introduce2text">저의 협업 스타일은 <span id="style"></span></p>
         </div>
     </div>
 
     <div>
         <footer>
             <div class="inner">
+                <p style="font-size: 1.3rem">contact</p>
                 <div class="footer-github">github : <span id="github"></span></div>
                 <div class="footer-blog">Blog &nbsp;&nbsp;&nbsp;: <span id="blog"></span></div>
                 <div class="footer-email">E-mail : <span id="email"></span></div>
@@ -892,6 +942,7 @@
             </div>
         </div>
     </div>
+
     <!--delete Modal-->
     <div class="modal" id="delete-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
